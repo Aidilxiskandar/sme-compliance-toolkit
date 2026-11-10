@@ -1,0 +1,8 @@
+# Real business data stays out of the repo (keep it in the private vault)
+private/
+*real*
+*.env
+# Office temp files
+~$*
+.DS_Store
+.claude/
