@@ -18,16 +18,16 @@ Most small businesses hold personal data (customer phone numbers, delivery addre
 | 4 | PDPA checklist (7 principles + 2024 amendments) | Markdown |
 | 5 | One-page incident response and breach notification plan | Markdown |
 | 6 | Gap assessment with a maturity score against CSF 2.0 | Spreadsheet |
-| 7 | Case study: a small cafe in Selangor, before and after | Markdown |
+| 7 | Case studies: [five fictional small businesses](case-study/), before and after | Markdown |
 
 ## Repository layout
 ```
 toolkit/      the templates a business fills in
-case-study/   the anonymised worked example (a small cafe)
+case-study/   five fictional businesses used to test the kit
 docs/         roadmap, framework mapping, decisions (adr/)
 ```
 
 ## Ground rules
 - **Own words only.** ISO/IEC 27001 and CIS Controls text is not reproduced. Controls are cited by number, and every template is original writing.
-- **Anonymised case study.** The worked example does not name the business or publish details an attacker could use.
-- **Public sources only.** The kit draws on public frameworks, legislation and the author's own business.
+- **Fictional case studies.** The kit is tested on five invented businesses, so no real business's weaknesses are published ([ADR 0002](docs/adr/0002-fictional-case-studies.md)).
+- **Public sources only.** The kit draws only on public frameworks and legislation.
