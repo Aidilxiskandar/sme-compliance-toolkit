@@ -27,6 +27,7 @@ npm test        # runs node --test on tests/*.test.mjs, no packages to install
 | `js/export.js` | JSON and CSV export (with formula-injection protection) |
 | `js/dom.js` | Safe DOM builder: data becomes text, never HTML |
 | `js/checklist.js` | Which PDPA checklist items apply, and the score |
+| `js/assess.js` | Gap assessment scoring, assurance gaps, planted-gap found/closed rules, cost totals |
 | `js/md.js` | Safe Markdown renderer for the toolkit templates (builds DOM nodes, no HTML parsing) |
 | `js/views/` | Dashboard, table editor, profile, controls, start, policies, checklist and breach plan pages |
 

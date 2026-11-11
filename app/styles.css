@@ -110,6 +110,18 @@ th { color: var(--muted); font-weight: 600; }
 .check-item.status-no { border-left-color: var(--danger); }
 .check-q { margin-bottom: 4px; }
 .check-row { display: grid; grid-template-columns: 170px 1fr; gap: 8px; margin-bottom: 6px; }
+/* Phase 3: assessment */
+.bar-cell { display: inline-flex; align-items: center; gap: 6px; min-width: 90px; }
+.bar-track { display: inline-block; width: 60px; height: 10px; border-radius: 5px; background: var(--border); overflow: hidden; }
+.bar-fill { display: block; height: 100%; min-width: 2px; }
+.bar-num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.scores td, .scores th { white-space: nowrap; }
+.row-current td { background: var(--ok-bg); }
+.hint { background: var(--warn-bg); color: var(--warn); padding: 6px 10px; border-radius: 8px; font-size: 14px; }
+.round-head { margin-top: 24px; }
+.check-item.level-0 { border-left-color: var(--danger); }
+.check-item.level-1 { border-left-color: var(--warn); }
+.check-item.level-2, .check-item.level-3 { border-left-color: var(--ok); }
 @media (max-width: 700px) {
   .check-row { grid-template-columns: 1fr; }
   main { overflow-wrap: anywhere; }

@@ -20,6 +20,11 @@ This policy covers everyone who uses {{business}}'s devices, accounts or data: s
 - Don't open attachments or links you weren't expecting.
 - Don't send IC copies, health information, bank details or other personal data through personal chat apps or personal email.
 
+## Contacting customers, students or patients
+- Contact them through business accounts or numbers, not your personal ones, unless {{responsible}} agrees.
+- If you work with children, message them only in groups that include a parent or another staff member, never one-to-one.
+- Keep messages about the business. Don't share their details with anyone outside the business.
+
 ## Social media
 - Only people the responsible person names may post for the business.
 - Don't post photos of customers, patients, children or staff without their (or a parent's) permission.

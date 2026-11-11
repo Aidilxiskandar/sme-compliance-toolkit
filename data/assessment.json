@@ -1,0 +1,215 @@
+{
+ "about": "Gap assessment question bank: one question per toolkit control. 'ask' is what you ask the owner; 'check' is the evidence to look at, because what owners believe and what is true often differ; 'good' describes level 3. Original wording. Revised 11 Nov 2026 after the coverage check found 3 planted gaps no question would reveal (PR-13 access requests, PR-4 online meeting rooms, GV-3 contact rules).",
+ "levels": [
+  [
+   0,
+   "Not in place"
+  ],
+  [
+   1,
+   "Partly or informal"
+  ],
+  [
+   2,
+   "In place"
+  ],
+  [
+   3,
+   "In place and checked regularly"
+  ]
+ ],
+ "questions": [
+  {
+   "id": "GV-1",
+   "ask": "Who is responsible for security and personal data here, and who covers when they're away?",
+   "check": "A named person and backup written down (policy or breach plan). If the DPO test is met: DPO appointed and registered on the SPDP portal.",
+   "good": "Named owner and backup, known to all staff; DPO registered if required; reviewed yearly."
+  },
+  {
+   "id": "GV-2",
+   "ask": "Do you know whether you must register with JPDP, need a DPO, and what to do after a breach?",
+   "check": "Registration certificate displayed if required; a written note of the DPO decision; the owner can explain the 72-hour rule.",
+   "good": "All three answered in writing and reviewed yearly."
+  },
+  {
+   "id": "GV-3",
+   "ask": "Do you have written rules for staff on using devices, passwords and data?",
+   "check": "Signed policy copies for every current staff member, including part-timers and freelancers. Do the rules cover contacting customers, students or patients from personal phones and accounts?",
+   "good": "Short policies, including rules for contacting customers, students or patients, signed by everyone and reviewed yearly."
+  },
+  {
+   "id": "GV-4",
+   "ask": "Have you listed what could go wrong and decided what to do about it?",
+   "check": "A risk register with owners and dates, updated in the last 12 months.",
+   "good": "Risk register reviewed at least yearly and after incidents."
+  },
+  {
+   "id": "GV-5",
+   "ask": "Which vendors, freelancers or platforms handle your data, and what do your agreements say about protecting it?",
+   "check": "A supplier list; contracts or written terms with data protection and breach-notice clauses for anyone processing personal data.",
+   "good": "Every processor has written terms; reviewed when suppliers change."
+  },
+  {
+   "id": "ID-1",
+   "ask": "Can you list every device used for the business?",
+   "check": "Walk around and compare: PCs, laptops, phones, tablets, router, POS, NAS, CCTV recorder, printers. Is each one on the list, with whether it still gets updates?",
+   "good": "Complete, current device list including support status, checked twice a year."
+  },
+  {
+   "id": "ID-2",
+   "ask": "What personal data do you hold, about whom, and where is it?",
+   "check": "A personal data list with counts, sensitivity, location, access and retention. Spot-check: phone galleries, Downloads folders, chat apps, shared drives.",
+   "good": "Complete data list that matches what the spot-check finds; reviewed yearly."
+  },
+  {
+   "id": "ID-3",
+   "ask": "Which online accounts does the business use, and whose email are they registered to?",
+   "check": "Account list including social, ads, marketplaces, delivery apps, banking and portals. Look at the recovery email on the most important ones: business or personal?",
+   "good": "Complete account list; all registered to business email with two recovery owners."
+  },
+  {
+   "id": "ID-4",
+   "ask": "When did you last check for default passwords, old software or things open to the internet?",
+   "check": "Try the router, CCTV and NAS default logins; check OS versions against support; look at router port-forwarding rules.",
+   "good": "No defaults, nothing unsupported, nothing exposed; checked twice a year."
+  },
+  {
+   "id": "PR-1",
+   "ask": "Does everyone have their own login, or are any logins shared?",
+   "check": "Look at the user lists in email, the main business system and social/marketplace accounts. Any generic names (frontdesk, admin, shop) or one login used by several people?",
+   "good": "Individual logins everywhere possible; unavoidable shared logins are in a password manager."
+  },
+  {
+   "id": "PR-2",
+   "ask": "Is two-step login (MFA) turned on for email, banking, social media and cloud storage?",
+   "check": "Open the security settings of each key account and see it, or have the owner show the authenticator prompt. Don't accept 'I think so'.",
+   "good": "MFA on every account that offers it; checked quarterly."
+  },
+  {
+   "id": "PR-3",
+   "ask": "How are passwords stored, and have default passwords been changed?",
+   "check": "Look for sticky notes, cards, password spreadsheets and browser-saved passwords on shared PCs. Try device default logins.",
+   "good": "Password manager in use; no written or default passwords."
+  },
+  {
+   "id": "PR-4",
+   "ask": "Can interns, part-timers or freelancers see data they don't need?",
+   "check": "Open the sharing settings of the main data folders and systems. Who has access to health, children's, ID and financial data? Who has admin rights? Include online meeting or class rooms: who can join with the link, and is there a waiting room?",
+   "good": "Access matches job needs; separate admin accounts; reviewed quarterly."
+  },
+  {
+   "id": "PR-5",
+   "ask": "When someone leaves, how do you remove their access?",
+   "check": "Compare user lists with current staff. Look for former staff, interns, freelancers or vendors still listed.",
+   "good": "Leaver checklist used every time; accounts reviewed every 3 months; no leftovers found."
+  },
+  {
+   "id": "PR-6",
+   "ask": "Have staff been taught to spot scams and handle personal data?",
+   "check": "Training date and attendance; ask two staff what they would do with a suspicious payment-change email.",
+   "good": "Training at hiring and yearly; staff answer correctly."
+  },
+  {
+   "id": "PR-7",
+   "ask": "Are computers, phones, routers and the NAS kept updated?",
+   "check": "Check update settings and OS versions; check firmware dates on router, NAS and CCTV; any device out of support?",
+   "good": "Automatic updates everywhere; nothing out of support."
+  },
+  {
+   "id": "PR-8",
+   "ask": "Do devices lock automatically and are laptops encrypted?",
+   "check": "Check screen-lock timeout and disk encryption status (BitLocker / FileVault / phone settings) on a sample of devices.",
+   "good": "Screen lock, encryption and firewall on every device."
+  },
+  {
+   "id": "PR-9",
+   "ask": "Is the customer Wi-Fi separate from business devices, and is anything opened to the internet?",
+   "check": "Join the guest Wi-Fi and see whether the POS, CCTV, NAS or PCs are reachable. Check router port forwarding and remote-access tools.",
+   "good": "Separate guest network; no inbound ports; remote access only with MFA."
+  },
+  {
+   "id": "PR-10",
+   "ask": "How is data backed up, and when did you last restore something?",
+   "check": "Find the backup: is a copy offline or separate from the main system? Ask for a restore of one file now.",
+   "good": "Automatic backups with an offline/separate copy; restore tested every 3 months."
+  },
+  {
+   "id": "PR-11",
+   "ask": "Do you collect only what you need, and delete old data?",
+   "check": "Look at the forms (what's asked), the oldest records kept, and how paper is thrown away.",
+   "good": "Minimal forms; retention periods set and followed; paper shredded."
+  },
+  {
+   "id": "PR-12",
+   "ask": "How do you send or share personal data?",
+   "check": "Check sharing links ('anyone with the link'), and ask how IC copies, results or invoices are sent (personal WhatsApp?).",
+   "good": "No open links; personal data only through business accounts with restricted sharing."
+  },
+  {
+   "id": "PR-13",
+   "ask": "Do people get a privacy notice, and do you have consent for marketing, sensitive data and children?",
+   "check": "Read the privacy notice (Malay and English? right business name?); check how marketing consent and parental consent are recorded; CCTV signs. Ask how they would handle a request for a copy of someone's data or a correction (reply in writing within 21 days).",
+   "good": "Correct notice in both languages; consents recorded; CCTV signs up; access and correction requests answered within 21 days."
+  },
+  {
+   "id": "PR-14",
+   "ask": "Where are the server, NAS and CCTV recorder, and who can get to them?",
+   "check": "Look: locked room or cabinet? Are screens with personal data visible to customers? Papers left out?",
+   "good": "Equipment locked away; clear desk and screen followed."
+  },
+  {
+   "id": "DE-1",
+   "ask": "Is anti-malware running on every computer?",
+   "check": "Check the security app status on each PC and laptop: on, updating, no ignored alerts. Check any PC involved in a past scam.",
+   "good": "On every device, updating, alerts go to someone who acts."
+  },
+  {
+   "id": "DE-2",
+   "ask": "Would you notice if someone logged into your email or bank from elsewhere?",
+   "check": "Are sign-in alerts on? Open the recent sign-in activity on the main email account together.",
+   "good": "Alerts on for key accounts, read by a named person; sign-in logs checked after any suspicion."
+  },
+  {
+   "id": "DE-3",
+   "ask": "Is there anything blocking known bad websites?",
+   "check": "Check router or device DNS settings for a filtering service.",
+   "good": "Filtering DNS on the router or all devices."
+  },
+  {
+   "id": "DE-4",
+   "ask": "Would staff know what to report and to whom?",
+   "check": "Ask two staff what they would do about a strange pop-up or a customer reporting a scam message in the business's name.",
+   "good": "All staff know the signs and the person to tell; reports are logged."
+  },
+  {
+   "id": "RS-1",
+   "ask": "If you were hacked tomorrow, what would you do first?",
+   "check": "A written incident and breach plan with names and contacts, printed or saved where staff can find it.",
+   "good": "One-page plan, known to staff, practised once a year."
+  },
+  {
+   "id": "RS-2",
+   "ask": "When would you have to tell JPDP or customers about a breach, and how fast?",
+   "check": "The owner can explain the significant harm / 1,000 people tests, 72 hours and 7 days, and where to notify. Past incidents assessed?",
+   "good": "Rules known; every past incident assessed and decided within 72 hours."
+  },
+  {
+   "id": "RS-3",
+   "ask": "Do you keep a record of incidents and breaches?",
+   "check": "A breach register with every incident (including ones not notified), kept for at least 2 years.",
+   "good": "Complete register with decisions and reasons."
+  },
+  {
+   "id": "RC-1",
+   "ask": "If your main system died today, how would you get running again?",
+   "check": "A clean backup to restore from, a person who knows how, and a past restore that worked.",
+   "good": "Restore steps written and tested; staff and customers told what they need."
+  },
+  {
+   "id": "RC-2",
+   "ask": "After the last incident or near miss, what did you change?",
+   "check": "Evidence of changes after past incidents (new settings, updated risks or policies).",
+   "good": "Short review after every incident; actions tracked to done."
+  }
+ ]
+}

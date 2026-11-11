@@ -6,6 +6,7 @@ import { renderCollection, slug } from './views/collection.js';
 import { renderDashboard, scorePill } from './views/dashboard.js';
 import { renderProfile, renderControls, renderStart, renderAbout } from './views/pages.js';
 import { renderPolicies, renderChecklist, renderPlan } from './views/phase2.js';
+import { renderAssessment, renderActions } from './views/assessment.js';
 
 const EXAMPLES = [
   { file: '01-kopi-senja.json', name: 'Kopi Senja', desc: 'cafe, 6 staff' },
@@ -19,7 +20,8 @@ const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
 const TABS = [
   ['dashboard', 'Dashboard'], ['profile', 'Profile'], ['assets', 'Devices'], ['accounts', 'Accounts'],
   ['data', 'Personal data'], ['risks', 'Risks'], ['checklist', 'PDPA checklist'], ['policies', 'Policies'],
-  ['plan', 'Breach plan'], ['breaches', 'Breach register'], ['controls', 'Controls'],
+  ['plan', 'Breach plan'], ['breaches', 'Breach register'], ['assessment', 'Gap assessment'], ['actions', 'Action plan'],
+  ['controls', 'Controls'],
 ];
 
 const COLUMNS = {
@@ -33,6 +35,7 @@ const COLUMNS = {
 let biz = null;
 let controls = [];
 let checklistItems = [];
+let bank = { levels: [], questions: [] };
 const main = document.getElementById('main');
 const bar = document.getElementById('bar');
 const note = document.getElementById('note');
@@ -49,6 +52,12 @@ async function init() {
     checklistItems = (await res.json()).items || [];
   } catch {
     checklistItems = [];
+  }
+  try {
+    const res = await fetch('../data/assessment.json');
+    bank = await res.json();
+  } catch {
+    bank = { levels: [], questions: [] };
   }
   const active = store.getActive();
   if (active) biz = await store.get(active);
@@ -113,8 +122,10 @@ async function render() {
     case 'checklist': return renderChecklist(main, biz, checklistItems, save);
     case 'policies': return renderPolicies(main, biz, arg);
     case 'plan': return renderPlan(main, biz);
+    case 'assessment': return renderAssessment(main, biz, bank, controls, save, arg);
+    case 'actions': return renderActions(main, biz, save);
     case 'controls': return renderControls(main, biz, controls, arg);
-    default: return renderDashboard(main, biz, checklistItems);
+    default: return renderDashboard(main, biz, checklistItems, controls);
   }
 }
 

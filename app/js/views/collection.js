@@ -15,7 +15,7 @@ export function field(f, value, idPrefix) {
     input = h('textarea', { id, name: f.key, rows: 2, maxlength: 2000 });
     input.value = value ?? '';
   } else {
-    input = h('input', { id, name: f.key, type: f.type === 'number' ? 'number' : f.type === 'date' ? 'date' : 'text', min: f.min, max: f.max, maxlength: f.type === 'text' ? 2000 : null, required: f.required, value: value ?? '' });
+    input = h('input', { id, name: f.key, type: f.type === 'number' ? 'number' : f.type === 'date' ? 'date' : 'text', min: f.min, max: f.max, step: f.decimal ? 'any' : null, maxlength: f.type === 'text' ? 2000 : null, required: f.required, value: value ?? '' });
   }
   const cls = f.type === 'bool' ? 'field field-bool' : f.type === 'textarea' ? 'field field-wide' : 'field';
   return f.type === 'bool'

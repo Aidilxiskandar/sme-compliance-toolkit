@@ -419,5 +419,516 @@
    "status": "no",
    "note": ""
   }
- }
+ },
+ "fixes": [
+  {
+   "id": "f-1",
+   "title": "Registration sheet: remove ex-tutors, tutors view-only, kill the public link, move to a business account with MFA",
+   "controls": "PR-4, PR-5, PR-12, PR-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Cikgu Kavitha",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-2",
+   "title": "New link per class with a waiting room; centre-managed meeting accounts",
+   "controls": "PR-4",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Admin",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-3",
+   "title": "Parental consent form for photos and results; act on take-down requests within days",
+   "controls": "PR-13",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Cikgu Kavitha",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-4",
+   "title": "Remove parents' IC numbers from the form; medical notes only where needed, with consent",
+   "controls": "PR-11, PR-13",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Admin",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-5",
+   "title": "MFA on the owner's email; separate business account; password manager (free plan)",
+   "controls": "PR-2, PR-3, ID-3",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Cikgu Kavitha",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-6",
+   "title": "Tutor code of conduct: contact students only in groups that include a parent",
+   "controls": "GV-3",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Cikgu Kavitha",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-7",
+   "title": "Delete former students' data older than 2 years",
+   "controls": "PR-11",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 4,
+   "owner": "Admin",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-8",
+   "title": "Office PC: password, screen lock, stop the browser saving passwords",
+   "controls": "PR-8, PR-1, PR-3",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Admin",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-9",
+   "title": "Check whether the centre must register with JPDP (Education class)",
+   "controls": "GV-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Cikgu Kavitha",
+   "status": "done",
+   "notes": ""
+  }
+ ],
+ "assessments": [
+  {
+   "id": "round-1",
+   "name": "Before: owner self-assessment",
+   "kind": "self",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": "\"Only the admin and I can see the registration sheet.\""
+    },
+    "PR-5": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": "\"The tutors are students, they're good with tech.\""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 2,
+     "note": "\"Parents are happy for us to post results.\""
+    },
+    "PR-14": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-2",
+   "name": "Before: verified",
+   "kind": "verified",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 0,
+     "note": "Sheet shared with all tutors as editors, including leavers; one public link."
+    },
+    "PR-5": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 0,
+     "note": "No written parental consent; a take-down request was ignored."
+    },
+    "PR-14": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-3",
+   "name": "After low-cost fixes: verified",
+   "kind": "verified",
+   "date": "2026-12-31",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 2,
+     "note": ""
+    }
+   }
+  }
+ ]
 }

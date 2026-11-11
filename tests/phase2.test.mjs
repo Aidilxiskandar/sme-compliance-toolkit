@@ -58,3 +58,49 @@ test('templates only use placeholders the app fills', () => {
 test('fill replaces placeholders and blanks missing values', () => {
   assert.equal(fill('{{business}} / {{responsible}} / {{other}}', { business: 'Kopi', responsible: '' }), 'Kopi / __________ / __________');
 });
+
+// ---- Phase 3 ----
+import { roundScore, assuranceGaps, gapFound, gapClosed, costTotals } from '../app/js/assess.js';
+import { execFileSync } from 'node:child_process';
+const ctl = JSON.parse(read('data/controls.json')).controls;
+const bank = JSON.parse(read('data/assessment.json'));
+const keys = JSON.parse(read('data/answer-keys.json')).businesses;
+
+test('question bank has exactly one question per control', () => {
+  assert.deepEqual(bank.questions.map((q) => q.id).sort(), [...controls].sort());
+  for (const q of bank.questions) assert.ok(q.ask && q.check && q.good, q.id);
+});
+
+test('coverage: every planted gap is reachable by a question\'s evidence step', () => {
+  const out = execFileSync(process.execPath, [new URL('../tools/coverage.mjs', import.meta.url).pathname], { encoding: 'utf8' });
+  assert.match(out, /Covered 40 of 40/);
+});
+
+test('round scoring, assurance gaps, found and closed', () => {
+  const c = [{ id: 'PR-2', fn: 'Protect', title: 'MFA' }, { id: 'PR-10', fn: 'Protect', title: 'Backups' }, { id: 'GV-1', fn: 'Govern', title: 'Owner' }];
+  const self = { answers: { 'PR-2': { level: 3 }, 'PR-10': { level: 2 }, 'GV-1': { level: null } } };
+  const ver = { answers: { 'PR-2': { level: 0 }, 'PR-10': { level: 2 } } };
+  assert.equal(roundScore(self, c).overall, 83, '5 of 6 points; N/A excluded');
+  assert.equal(roundScore(ver, c).byFunction.Govern, null);
+  assert.deepEqual(assuranceGaps(self, ver, c).map((g) => g.id), ['PR-2']);
+  const gap = { controls: ['PR-10', 'PR-2'] };
+  assert.equal(gapFound(gap, ver), true, 'found through the secondary control');
+  assert.equal(gapClosed(gap, ver), true, 'closed because the primary control is at 2');
+  assert.equal(gapClosed({ controls: ['PR-2'] }, ver), false);
+});
+
+test('every example has three rounds that tell the expected story', () => {
+  for (const [num, b] of Object.entries(ex)) {
+    assert.equal(b.assessments.length, 3, num);
+    const [s, v, a] = b.assessments.map((r) => roundScore(r, ctl).overall);
+    assert.ok(s > v, `${num}: self-assessment should be higher than verified`);
+    assert.ok(a > v, `${num}: after fixes should beat before`);
+    assert.equal(keys[num].filter((g) => gapFound(g, b.assessments[1])).length, 8, `${num}: verified round finds all planted gaps`);
+    assert.ok(assuranceGaps(b.assessments[0], b.assessments[1], ctl).length > 0, num);
+  }
+});
+
+test('cost totals', () => {
+  const t = costTotals([{ oneOff: 100, monthly: 10, hours: 1.5, status: 'done' }, { oneOff: 50, monthly: 0, hours: 2, status: 'planned' }], 'done');
+  assert.deepEqual(t, { oneOff: 100, monthly: 10, hours: 1.5, count: 1 });
+});

@@ -23,12 +23,12 @@ Pace: about 4 to 5 hours a week.
 - [x] Five example businesses filled in: checklist answers, contacts and breach-register entries
 - **Deliverable:** policy pack an owner can adopt in an afternoon ✅
 
-## Phase 3: Measure (Mar to Apr 2027)
-- [ ] Template 6: gap assessment with maturity scoring
-- [ ] "Before" assessment of all five businesses, from the "owner says" view
-- [ ] Check the assessment finds the planted gaps; improve the questions where it misses
-- [ ] Apply low-cost fixes, then the "after" assessment
-- **Deliverable:** scored before/after for five businesses, with costs
+## Phase 3: Measure (done 11 Nov 2026)
+- [x] Template 6: gap assessment, 32 questions with an *ask* and a *how to check* step, levels 0 to 3 ([data/assessment.json](../data/assessment.json)), in the app with scores by round, assurance gaps and inventory hints
+- [x] "Before" assessment of all five businesses: self-assessment (owner says) and verified (evidence)
+- [x] Coverage check of the question bank against the 40 planted gaps: 37/40 at first, 3 questions improved, now 40/40 (`tools/coverage.mjs`)
+- [x] Action plan with rough costs for each business, then the "after" assessment
+- **Deliverable:** scored before/after for five businesses, with costs ✅ ([phase3-results.md](phase3-results.md))
 
 ## Phase 4: Publish and apply (2027)
 - [ ] Case study write-up (comparing the five businesses)

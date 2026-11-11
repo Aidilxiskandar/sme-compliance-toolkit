@@ -133,6 +133,23 @@ export const COLLECTIONS = {
   },
 };
 
+COLLECTIONS.fixes = {
+  label: 'Action plan', singular: 'action',
+  help: 'Fixes to close the gaps, with rough costs. Costs are estimates for planning, not quotes.',
+  fields: [
+    { key: 'title', label: 'Action', type: 'text', required: true },
+    { key: 'controls', label: 'Toolkit controls (e.g. PR-2, PR-10)', type: 'text' },
+    { key: 'oneOff', label: 'One-off cost (RM)', type: 'number', min: 0, decimal: true },
+    { key: 'monthly', label: 'Monthly cost (RM)', type: 'number', min: 0, decimal: true },
+    { key: 'hours', label: 'Effort (hours)', type: 'number', min: 0, decimal: true },
+    { key: 'owner', label: 'Owner', type: 'text' },
+    { key: 'status', label: 'Status', type: 'select', options: [['planned', 'Planned'], ['done', 'Done']] },
+    { key: 'notes', label: 'Notes', type: 'textarea' },
+  ],
+};
+
+export const ROUND_KINDS = [['self', 'Self-assessment (what the owner says)'], ['verified', 'Verified (evidence checked)']];
+
 export const CHECK_STATUS = [['unknown', 'Not answered'], ['yes', 'Yes'], ['partly', 'Partly'], ['no', 'No'], ['na', 'Not applicable']];
 
 export function newId() {
@@ -157,6 +174,7 @@ export function newBusiness(name = 'New business') {
   const b = { schema: SCHEMA, id: newId(), updated: new Date().toISOString(), profile: { ...defaultsFor(PROFILE_FIELDS), name } };
   for (const k of Object.keys(COLLECTIONS)) b[k] = [];
   b.checklist = {};
+  b.assessments = [];
   return b;
 }
 
@@ -173,7 +191,7 @@ export function coerce(f, v) {
     case 'number': {
       let n = Number(v);
       if (!Number.isFinite(n)) n = f.default ?? f.min ?? 0;
-      n = Math.round(n);
+      n = f.decimal ? Math.round(n * 10) / 10 : Math.round(n);
       if (f.min !== undefined) n = Math.max(f.min, n);
       if (f.max !== undefined) n = Math.min(f.max, n);
       return n;
@@ -213,7 +231,34 @@ export function validateBusiness(raw) {
     b[k] = rows.slice(0, MAX_ROWS).filter((r) => r && typeof r === 'object').map((r) => cleanRecord(c.fields, r));
   }
   b.checklist = cleanChecklist(raw.checklist);
+  b.assessments = cleanAssessments(raw.assessments);
   return { ok: true, errors, value: b };
+}
+
+// Assessment rounds: [{ id, name, kind, date, answers: { 'PR-2': { level: 0-3 | null, note } } }]
+// level null means "not applicable".
+function cleanAssessments(raw) {
+  if (!Array.isArray(raw)) return [];
+  return raw.slice(0, 20).filter((r) => r && typeof r === 'object' && !Array.isArray(r)).map((r) => {
+    const answers = {};
+    if (r.answers && typeof r.answers === 'object' && !Array.isArray(r.answers)) {
+      for (const [cid, v] of Object.entries(r.answers).slice(0, 200)) {
+        if (!/^[A-Z]{2}-\d{1,2}$/.test(cid) || !v || typeof v !== 'object') continue;
+        const n = Number(v.level);
+        const level = v.level === null ? null : Number.isInteger(n) && n >= 0 && n <= 3 ? n : undefined;
+        if (level === undefined) continue;
+        answers[cid] = { level, note: String(v.note ?? '').slice(0, MAX_TEXT) };
+      }
+    }
+    const id = String(r.id ?? '');
+    return {
+      id: /^[a-z0-9-]{1,40}$/i.test(id) ? id : newId(),
+      name: String(r.name ?? 'Assessment').slice(0, 100) || 'Assessment',
+      kind: ROUND_KINDS.some(([k]) => k === r.kind) ? r.kind : 'self',
+      date: /^\d{4}-\d{2}-\d{2}$/.test(String(r.date ?? '')) ? r.date : '',
+      answers,
+    };
+  });
 }
 
 // Checklist answers: { K01: { status, note }, ... }. Only well-formed ids and known statuses survive.

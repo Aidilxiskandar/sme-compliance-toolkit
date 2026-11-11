@@ -1,0 +1,55 @@
+{
+ "about": "Answer keys for the five fictional case-study businesses: the 8 planted gaps in each profile's 'What is actually true' section, the controls that should catch each one, and 'evidence': a phrase that must appear in at least one of those controls' 'check' step in data/assessment.json for the gap to count as covered by the question bank.",
+ "businesses": {
+  "01": [
+   {"gap": 1, "text": "Guest Wi-Fi, POS and CCTV on one flat network; router admin still default", "controls": ["PR-9", "PR-3"], "evidence": "guest Wi-Fi"},
+   {"gap": 2, "text": "DVR default admin password with remote viewing over the internet", "controls": ["PR-3", "ID-4", "PR-9"], "evidence": "CCTV"},
+   {"gap": 3, "text": "POS admin PIN on a sticky note; former staff still have POS logins", "controls": ["PR-3", "PR-5"], "evidence": "sticky notes"},
+   {"gap": 4, "text": "Loyalty list collected with no notice; promos sent without consent", "controls": ["PR-13"], "evidence": "marketing consent"},
+   {"gap": 5, "text": "Staff IC and bank photos in the owner's phone gallery, syncing to a personal cloud without 2-step verification", "controls": ["ID-2", "PR-12", "PR-2"], "evidence": "phone galleries"},
+   {"gap": 6, "text": "Shared laptop with no Windows password; Google account always signed in", "controls": ["PR-8", "PR-1"], "evidence": "screen-lock"},
+   {"gap": 7, "text": "No CCTV signage or retention period", "controls": ["PR-13", "PR-14"], "evidence": "CCTV signs"},
+   {"gap": 8, "text": "Nothing backed up outside the one Google account", "controls": ["PR-10"], "evidence": "offline or separate"}
+  ],
+  "02": [
+   {"gap": 1, "text": "Server PC on out-of-support Windows; clinic system not updated in 3 years", "controls": ["PR-7", "ID-4"], "evidence": "out of support"},
+   {"gap": 2, "text": "Backup disk always plugged into the server; restore never tested", "controls": ["PR-10", "RC-1"], "evidence": "restore of one file"},
+   {"gap": 3, "text": "Shared 'frontdesk' login; locum uses the lead doctor's login", "controls": ["PR-1"], "evidence": "generic names"},
+   {"gap": 4, "text": "Vendor remote-access tool always on, unattended, password never changed", "controls": ["PR-9", "GV-5", "PR-5"], "evidence": "remote-access tools"},
+   {"gap": 5, "text": "Shared webmail without 2-step verification, password on a card; years of lab results", "controls": ["PR-2", "PR-3", "PR-11"], "evidence": "cards"},
+   {"gap": 6, "text": "Lab results and IC photos sent over personal WhatsApp", "controls": ["PR-12"], "evidence": "personal WhatsApp"},
+   {"gap": 7, "text": "No notice or consent for sensitive data; no process for patients asking for their records", "controls": ["PR-13"], "evidence": "copy of someone's data"},
+   {"gap": 8, "text": "No incident plan; nobody knows the breach notification duty", "controls": ["RS-1", "RS-2", "GV-2"], "evidence": "72"}
+  ],
+  "03": [
+   {"gap": 1, "text": "Founders and freelancer share one social/seller login; password reused", "controls": ["PR-1", "PR-3"], "evidence": "one login used by several people"},
+   {"gap": 2, "text": "2-step verification off on the social account that owns the ad account and card", "controls": ["PR-2"], "evidence": "security settings of each key account"},
+   {"gap": 3, "text": "Previous freelancer still has full admin rights", "controls": ["PR-5"], "evidence": "freelancers"},
+   {"gap": 4, "text": "Order exports in Downloads and in an 'anyone with the link' cloud folder", "controls": ["ID-2", "PR-12"], "evidence": "anyone with the link"},
+   {"gap": 5, "text": "Printed packing lists with addresses go in the normal bin", "controls": ["PR-11", "PR-14"], "evidence": "paper"},
+   {"gap": 6, "text": "Website admin account on a founder's personal email", "controls": ["ID-3"], "evidence": "recovery email"},
+   {"gap": 7, "text": "Privacy notice copied from another shop, naming a different business", "controls": ["PR-13"], "evidence": "right business name"},
+   {"gap": 8, "text": "No agreement with the freelancer about protecting customer data", "controls": ["GV-5"], "evidence": "breach-notice clauses"}
+  ],
+  "04": [
+   {"gap": 1, "text": "No MFA on cloud email; legacy sign-in allowed", "controls": ["PR-2"], "evidence": "security settings of each key account"},
+   {"gap": 2, "text": "NAS admin and shares reachable from the internet; firmware 2 years old", "controls": ["PR-9", "ID-4", "PR-7"], "evidence": "port forwarding"},
+   {"gap": 3, "text": "Client portal and banking logins in passwords.xlsx readable by all staff", "controls": ["PR-3", "PR-4"], "evidence": "password spreadsheets"},
+   {"gap": 4, "text": "No check on 'our bank account has changed' requests", "controls": ["PR-6"], "evidence": "payment-change email"},
+   {"gap": 5, "text": "Interns' and remote staff's personal laptops unencrypted and unmanaged, with client files synced", "controls": ["PR-8", "PR-4"], "evidence": "disk encryption"},
+   {"gap": 6, "text": "NAS snapshots only; no offsite or offline backup", "controls": ["PR-10"], "evidence": "offline or separate"},
+   {"gap": 7, "text": "Former staff mailboxes kept; one former intern's account never disabled", "controls": ["PR-5"], "evidence": "interns"},
+   {"gap": 8, "text": "No retention rule: closed clients' IC copies kept 15+ years", "controls": ["PR-11"], "evidence": "oldest records"}
+  ],
+  "05": [
+   {"gap": 1, "text": "Registration form asks for far more than needed (parents' IC numbers, medical notes)", "controls": ["PR-11"], "evidence": "forms"},
+   {"gap": 2, "text": "Registration spreadsheet shared with all tutors as editors, including leavers; one public link", "controls": ["PR-4", "PR-5", "PR-12"], "evidence": "sharing settings"},
+   {"gap": 3, "text": "Photos and results of minors posted without consent; take-down request ignored", "controls": ["PR-13"], "evidence": "parental consent"},
+   {"gap": 4, "text": "Video-call links reused weekly and posted in public-facing groups", "controls": ["PR-4", "PR-9"], "evidence": "online meeting"},
+   {"gap": 5, "text": "Tutors message students directly on personal phones with no rules", "controls": ["GV-3", "PR-6"], "evidence": "contacting customers, students or patients"},
+   {"gap": 6, "text": "Owner's personal email without 2-step verification used for all business logins", "controls": ["PR-2", "ID-3"], "evidence": "recovery email"},
+   {"gap": 7, "text": "Former students' data never deleted (8 years)", "controls": ["PR-11"], "evidence": "oldest records"},
+   {"gap": 8, "text": "Shared office PC with no password; browser saves every password", "controls": ["PR-8", "PR-3", "PR-1"], "evidence": "browser-saved passwords"}
+  ]
+ }
+}

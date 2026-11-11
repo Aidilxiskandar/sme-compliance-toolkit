@@ -423,5 +423,516 @@
    "status": "no",
    "note": ""
   }
- }
+ },
+ "fixes": [
+  {
+   "id": "f-1",
+   "title": "Remove the previous freelancer; give each person their own role in the business account; MFA on everything",
+   "controls": "PR-5, PR-1, PR-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Aisyah",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-2",
+   "title": "Password manager (team plan)",
+   "controls": "PR-3",
+   "oneOff": 0,
+   "monthly": 30,
+   "hours": 1,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": "Estimate"
+  },
+  {
+   "id": "f-3",
+   "title": "Remove \"anyone with the link\" shares; delete old order exports; shredder for packing lists",
+   "controls": "PR-12, PR-11",
+   "oneOff": 150,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": "Shredder"
+  },
+  {
+   "id": "f-4",
+   "title": "Move the website admin account to a business email",
+   "controls": "ID-3",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Aisyah",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-5",
+   "title": "Contract with the freelancer: data protection and breach-notice clauses",
+   "controls": "GV-5",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-6",
+   "title": "New privacy notice (BM/EN), covering ad tracking",
+   "controls": "PR-13",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 4,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-7",
+   "title": "Assess the customer scam incident; late breach notice to JPDP with reasons; warn customers",
+   "controls": "RS-2, RS-3",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 6,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": "72 hours already passed, so the notice explains the delay"
+  },
+  {
+   "id": "f-8",
+   "title": "Appoint and register a DPO (Nurul) because of ad-tracking audiences",
+   "controls": "GV-1, GV-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Nurul",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-9",
+   "title": "Laptop disk encryption and screen lock",
+   "controls": "PR-8",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Aisyah",
+   "status": "planned",
+   "notes": ""
+  }
+ ],
+ "assessments": [
+  {
+   "id": "round-1",
+   "name": "Before: owner self-assessment",
+   "kind": "self",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 2,
+     "note": "\"The platforms handle security, not us.\""
+    },
+    "PR-3": {
+     "level": 2,
+     "note": "\"Our accounts have strong passwords.\""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": "\"We only share access with people we trust.\""
+    },
+    "PR-6": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-2",
+   "name": "Before: verified",
+   "kind": "verified",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 0,
+     "note": "MFA on the marketplaces, but off on the social account that owns the ad account."
+    },
+    "PR-3": {
+     "level": 0,
+     "note": "One shared login, password reused on other sites."
+    },
+    "PR-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 0,
+     "note": "Previous freelancer still has full admin."
+    },
+    "PR-6": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-3",
+   "name": "After low-cost fixes: verified",
+   "kind": "verified",
+   "date": "2026-12-31",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 1,
+     "note": ""
+    }
+   }
+  }
+ ]
 }

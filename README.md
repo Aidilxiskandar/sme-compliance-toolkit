@@ -2,7 +2,7 @@
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
-> Status: 🚧 Phases 1 and 2 done. The **web app** (`app/`) holds the inventory, risk register, PDPA checks, a 27-item PDPA checklist, a filled-in policy pack, an incident and breach plan, and a breach register, with five fictional businesses as examples. Next: Phase 3, the gap assessment. See the [roadmap](docs/roadmap.md).
+> Status: ✅ Phases 1 to 3 done. The **web app** (`app/`) covers inventory, risks, PDPA duties and checklist, policies, breach plan and register, a **gap assessment** and an action plan, tested on five fictional businesses. Headline result: asking owners alone found only **23 of 40** planted gaps; checking the evidence found all 40, and low-cost fixes (about RM3,850 one-off across five businesses) raised verified scores from 3–22% to 47–58%. See [Phase 3 results](docs/phase3-results.md) and the [roadmap](docs/roadmap.md).
 
 > **Not legal advice.** This is a starter kit to help a small business get the basics right. For legal questions about the PDPA, check the official sources or ask a lawyer.
 
@@ -30,6 +30,8 @@ A browser-only web app: everything stays on the user's device, with no server or
 - **PDPA checklist:** 27 checks with a score, hiding items that don't apply.
 - **Policy pack and breach plan:** generated from the business's own details, ready to print or download.
 - **Breach register:** the fields the JPDP guideline requires, kept for 2 years.
+- **Gap assessment:** 32 questions with *ask* and *how to check* steps, self vs verified rounds, assurance gaps, scores by CSF function.
+- **Action plan:** fixes with rough costs and effort, done vs planned.
 - **Exports:** CSV, JSON save/load and a printable report.
 
 ## Repository layout

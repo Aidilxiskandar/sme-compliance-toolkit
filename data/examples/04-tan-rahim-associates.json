@@ -425,5 +425,527 @@
    "status": "no",
    "note": ""
   }
- }
+ },
+ "fixes": [
+  {
+   "id": "f-1",
+   "title": "MFA for all 12 mailboxes; block legacy sign-in; sign-in alerts",
+   "controls": "PR-2, DE-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Pn. Rahim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-2",
+   "title": "Investigate the fake-invoice near miss: check mailbox sign-in logs; decide on notification",
+   "controls": "RS-2, RS-3",
+   "oneOff": 500,
+   "monthly": 0,
+   "hours": 4,
+   "owner": "IT technician",
+   "status": "done",
+   "notes": "Estimate"
+  },
+  {
+   "id": "f-3",
+   "title": "Call-back rule for any bank-detail change; staff training on invoice fraud",
+   "controls": "PR-6",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Pn. Rahim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-4",
+   "title": "Close the NAS port; VPN with MFA for remote staff; update NAS firmware",
+   "controls": "PR-9, PR-7, ID-4",
+   "oneOff": 800,
+   "monthly": 0,
+   "hours": 6,
+   "owner": "IT technician",
+   "status": "done",
+   "notes": "Router/firewall with VPN (estimate)"
+  },
+  {
+   "id": "f-5",
+   "title": "Offsite cloud backup of the NAS, plus quarterly restore test",
+   "controls": "PR-10, RC-1",
+   "oneOff": 0,
+   "monthly": 150,
+   "hours": 3,
+   "owner": "Mr. Tan",
+   "status": "done",
+   "notes": "Estimate"
+  },
+  {
+   "id": "f-6",
+   "title": "Business password manager; replace passwords.xlsx and change every password in it",
+   "controls": "PR-3, PR-4",
+   "oneOff": 0,
+   "monthly": 100,
+   "hours": 6,
+   "owner": "Pn. Rahim",
+   "status": "done",
+   "notes": "Estimate"
+  },
+  {
+   "id": "f-7",
+   "title": "Disable the ex-intern; quarterly account review",
+   "controls": "PR-5",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 1,
+   "owner": "Pn. Rahim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-8",
+   "title": "Appoint and register a partner as DPO (over 10,000 people with financial data)",
+   "controls": "GV-1, GV-2",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Pn. Rahim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-9",
+   "title": "Only firm-managed, encrypted laptops may sync client files; buy two for interns",
+   "controls": "PR-8, PR-4",
+   "oneOff": 5000,
+   "monthly": 0,
+   "hours": 6,
+   "owner": "Mr. Tan",
+   "status": "planned",
+   "notes": "Budgeted for Q1 2027"
+  },
+  {
+   "id": "f-10",
+   "title": "Retention schedule and deletion of closed clients past the legal period",
+   "controls": "PR-11",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 12,
+   "owner": "Mr. Tan",
+   "status": "planned",
+   "notes": "Needs a check of what tax and company law require"
+  }
+ ],
+ "assessments": [
+  {
+   "id": "round-1",
+   "name": "Before: owner self-assessment",
+   "kind": "self",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 2,
+     "note": "\"We use a big-name cloud provider, so email is secure.\""
+    },
+    "PR-3": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": "\"Staff know not to click on strange links.\""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 2,
+     "note": "\"The NAS is in a locked room.\""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 1,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 1,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-2",
+   "name": "Before: verified",
+   "kind": "verified",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 0,
+     "note": "No MFA on any mailbox; legacy sign-in allowed."
+    },
+    "PR-3": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 1,
+     "note": "Near miss on a fake invoice in a real email thread; no call-back rule."
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": "NAS reachable from the internet through a forwarded port."
+    },
+    "PR-10": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 1,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 1,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-3",
+   "name": "After low-cost fixes: verified",
+   "kind": "verified",
+   "date": "2026-12-31",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 3,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 2,
+     "note": ""
+    }
+   }
+  }
+ ]
 }

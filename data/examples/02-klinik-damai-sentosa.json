@@ -461,5 +461,516 @@
    "status": "no",
    "note": ""
   }
- }
+ },
+ "fixes": [
+  {
+   "id": "f-1",
+   "title": "Offline backup: rotate two drives weekly, test a restore now and every 3 months",
+   "controls": "PR-10, RC-1",
+   "oneOff": 600,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Dr. Lim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-2",
+   "title": "Individual logins in the clinic system for every staff member and the locum",
+   "controls": "PR-1, PR-4",
+   "oneOff": 500,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Clinic system vendor",
+   "status": "done",
+   "notes": "Vendor configuration fee (estimate)"
+  },
+  {
+   "id": "f-3",
+   "title": "Vendor remote access on request only, new password, MFA; data protection and breach-notice clause in the vendor contract",
+   "controls": "PR-9, GV-5, PR-5",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "Dr. Lim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-4",
+   "title": "Business email with individual accounts and MFA; move lab results off the shared webmail",
+   "controls": "PR-2, PR-3, PR-12",
+   "oneOff": 0,
+   "monthly": 90,
+   "hours": 6,
+   "owner": "Dr. Lim",
+   "status": "done",
+   "notes": "About RM15 per user per month (estimate)"
+  },
+  {
+   "id": "f-5",
+   "title": "Check the reception PC for remote-access software after the scam call",
+   "controls": "DE-1, RS-2",
+   "oneOff": 300,
+   "monthly": 0,
+   "hours": 2,
+   "owner": "IT technician",
+   "status": "done",
+   "notes": "Estimate"
+  },
+  {
+   "id": "f-6",
+   "title": "Register the clinic with JPDP (Sdn Bhd: RM300 a year); appoint and register Dr. Lim as DPO",
+   "controls": "GV-2, GV-1",
+   "oneOff": 300,
+   "monthly": 0,
+   "hours": 3,
+   "owner": "Dr. Lim",
+   "status": "done",
+   "notes": "Fee from Circular 1/2026"
+  },
+  {
+   "id": "f-7",
+   "title": "Privacy notice and consent form (BM/EN); process for patients asking for their records",
+   "controls": "PR-13",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 4,
+   "owner": "Clinic manager",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-8",
+   "title": "Policies, breach plan, staff training on scams and WhatsApp rules",
+   "controls": "GV-3, RS-1, PR-6, PR-12",
+   "oneOff": 0,
+   "monthly": 0,
+   "hours": 6,
+   "owner": "Dr. Lim",
+   "status": "done",
+   "notes": ""
+  },
+  {
+   "id": "f-9",
+   "title": "Replace the out-of-support server PC and update the clinic system",
+   "controls": "PR-7, ID-4",
+   "oneOff": 4500,
+   "monthly": 0,
+   "hours": 8,
+   "owner": "Clinic system vendor",
+   "status": "planned",
+   "notes": "Estimate; budgeted for Q1 2027. Until then the server is isolated from the internet"
+  }
+ ],
+ "assessments": [
+  {
+   "id": "round-1",
+   "name": "Before: owner self-assessment",
+   "kind": "self",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": "\"Each staff member has their own login.\""
+    },
+    "PR-2": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 2,
+     "note": "\"The vendor backs up the system.\""
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": "\"Our PCs have antivirus.\""
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-2",
+   "name": "Before: verified",
+   "kind": "verified",
+   "date": "2026-11-11",
+   "answers": {
+    "GV-1": {
+     "level": 1,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 0,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 1,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 0,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 0,
+     "note": "Shared \"frontdesk\" login; locum uses Dr. Lim's login."
+    },
+    "PR-2": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 0,
+     "note": "Backup disk always plugged into the server; no restore ever tested."
+    },
+    "PR-11": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": "Antivirus present, but the reception PC was never checked after the scam call."
+    },
+    "DE-2": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 0,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 0,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 0,
+     "note": ""
+    }
+   }
+  },
+  {
+   "id": "round-3",
+   "name": "After low-cost fixes: verified",
+   "kind": "verified",
+   "date": "2026-12-31",
+   "answers": {
+    "GV-1": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-2": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-3": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-4": {
+     "level": 2,
+     "note": ""
+    },
+    "GV-5": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-1": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-2": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-3": {
+     "level": 2,
+     "note": ""
+    },
+    "ID-4": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-1": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-2": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-3": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-4": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-5": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-6": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-7": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-8": {
+     "level": 0,
+     "note": ""
+    },
+    "PR-9": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-10": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-11": {
+     "level": 1,
+     "note": ""
+    },
+    "PR-12": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-13": {
+     "level": 2,
+     "note": ""
+    },
+    "PR-14": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-1": {
+     "level": 2,
+     "note": ""
+    },
+    "DE-2": {
+     "level": 1,
+     "note": ""
+    },
+    "DE-3": {
+     "level": 0,
+     "note": ""
+    },
+    "DE-4": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-2": {
+     "level": 2,
+     "note": ""
+    },
+    "RS-3": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-1": {
+     "level": 2,
+     "note": ""
+    },
+    "RC-2": {
+     "level": 1,
+     "note": ""
+    }
+   }
+  }
+ ]
 }
