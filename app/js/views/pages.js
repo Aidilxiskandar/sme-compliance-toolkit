@@ -52,7 +52,7 @@ export function renderStart(root, { onNew, onExample, onImport, examples }) {
     h('section', { class: 'hero' },
       h('h2', {}, 'Security and PDPA starter kit for small businesses'),
       h('p', {}, 'List your devices, accounts and personal data, rate your risks, and see which PDPA duties apply and what to fix first.'),
-      h('p', { class: 'privacy' }, '🔒 Everything you enter stays in this browser on this device. Nothing is sent to a server. Use "Save file" to keep a copy.'),
+      h('p', { class: 'privacy' }, '🔒 Everything you enter stays in this browser on this device. Nothing is sent to a server. Use "Save file" to keep a copy. On a shared computer, clear your data when you finish (see About).'),
     ),
     h('div', { class: 'start-grid' },
       h('section', { class: 'card' }, h('h3', {}, 'Start'),
@@ -65,12 +65,14 @@ export function renderStart(root, { onNew, onExample, onImport, examples }) {
   );
 }
 
-export function renderAbout(root) {
+export function renderAbout(root, onClearAll) {
   root.append(h('section', { class: 'card prose' },
     h('h2', {}, 'About this toolkit'),
     h('p', {}, 'A free starter kit to help Malaysian small businesses get security and personal data protection basics right. It is built on the NIST Cybersecurity Framework 2.0, mapped to ISO/IEC 27001:2022 and CIS Controls v8.1 (Implementation Group 1), and covers the Personal Data Protection Act 2010 as amended in 2024.'),
     h('h3', {}, 'Your data'),
     h('p', {}, 'The app runs entirely in your browser. Your entries are saved in this browser\'s storage on this device and in any file you export. There is no server, account, analytics or tracking. Clearing your browser data deletes your entries, so save a file.'),
+    h('p', {}, h('strong', {}, 'On a shared or public computer: '), 'anyone who uses this browser profile can open what you entered, because it is stored unencrypted. Save a file and clear the data when you finish.'),
+    onClearAll ? h('p', {}, h('button', { type: 'button', class: 'danger', onclick: onClearAll }, 'Clear all data from this browser')) : null,
     h('h3', {}, 'Not legal advice'),
     h('p', {}, 'The PDPA checks are indications based on the JPDP guidelines and circulars listed in the project documents (checked 11 Nov 2026). For legal questions, check pdp.gov.my or ask a lawyer.'),
   ));

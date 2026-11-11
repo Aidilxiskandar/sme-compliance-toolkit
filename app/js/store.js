@@ -54,6 +54,10 @@ export const LocalStore = {
     delete all[id];
     writeAll(all);
   },
+  async clearAll() {
+    memory.clear();
+    try { localStorage.removeItem(KEY); localStorage.removeItem(ACTIVE); } catch { /* ignore */ }
+  },
   getActive() {
     try { return localStorage.getItem(ACTIVE); } catch { return memory.get('__active') || null; }
   },

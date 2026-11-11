@@ -40,7 +40,23 @@ const main = document.getElementById('main');
 const bar = document.getElementById('bar');
 const note = document.getElementById('note');
 
+// Anti-clickjacking: GitHub Pages can't send X-Frame-Options or a frame-ancestors header,
+// and both are ignored in a <meta> CSP. So if another site frames the app, show no data and
+// no buttons, only a link to open the app directly.
+function framed() {
+  try { return window.top !== window.self; } catch { return true; }
+}
+
 async function init() {
+  if (framed()) {
+    clear(main);
+    clear(bar);
+    main.append(h('section', { class: 'card' },
+      h('h2', {}, 'This app can\'t be shown inside another website'),
+      h('p', {}, 'To protect your data, the SME Security Kit only works when opened directly.'),
+      h('p', {}, h('a', { href: 'https://aidilxiskandar.github.io/sme-compliance-toolkit/app/', target: '_blank', rel: 'noopener noreferrer' }, 'Open the SME Security Kit'))));
+    return;
+  }
   try {
     const res = await fetch('../data/controls.json');
     controls = (await res.json()).controls || [];
@@ -88,7 +104,7 @@ async function drawBar() {
     picker,
     h('button', { type: 'button', onclick: addBusiness }, 'New'),
     h('label', { class: 'button' }, 'Open file', h('input', { type: 'file', accept: 'application/json,.json', class: 'sr-only', onchange: importFile })),
-    biz ? h('button', { type: 'button', onclick: () => download(`${slug(biz.profile.name)}.json`, JSON.stringify(biz, null, 2)) }, 'Save file') : null,
+    biz ? h('button', { type: 'button', title: 'The file contains this business\'s security weaknesses and personal data details. Keep it somewhere private.', onclick: saveFile }, 'Save file') : null,
     biz ? h('button', { type: 'button', class: 'danger', onclick: removeBusiness }, 'Delete') : null,
   );
   if (biz) {
@@ -99,14 +115,16 @@ async function drawBar() {
 }
 
 function currentRoute() {
-  return location.hash.replace(/^#\/?/, '').split('/').map((x) => decodeURIComponent(x));
+  return location.hash.replace(/^#\/?/, '').slice(0, 300).split('/').map((x) => {
+    try { return decodeURIComponent(x); } catch { return ''; } // malformed %-encoding: ignore
+  });
 }
 
 async function render() {
   await drawBar();
   clear(main);
   const [route, arg] = currentRoute();
-  if (route === 'about') return renderAbout(main);
+  if (route === 'about') return renderAbout(main, clearAll);
   if (route === 'example') {
     const x = EXAMPLES.find((e) => e.file.startsWith(String(arg).padStart(2, '0') + '-'));
     if (x) return loadExample(x);
@@ -129,6 +147,19 @@ async function render() {
   }
 }
 
+function saveFile() {
+  if (!confirm('This file lists the business\'s security weaknesses and details of the personal data it holds. Keep it somewhere private (not a shared folder or chat). Save it?')) return;
+  download(`${slug(biz.profile.name)}.json`, JSON.stringify(biz, null, 2));
+}
+
+async function clearAll() {
+  if (!confirm('Delete ALL businesses saved in this browser? Save files first if you want to keep anything. This cannot be undone.')) return;
+  await store.clearAll();
+  biz = null;
+  location.hash = '#/';
+  render();
+}
+
 async function addBusiness() {
   const name = prompt('Business name');
   if (!name || !name.trim()) return;
@@ -149,6 +180,12 @@ async function loadExample(x) {
   try {
     const res = await fetch(`../data/examples/${x.file}`);
     const { value } = validateBusiness(await res.json());
+    // A link like #/example/01 can come from anywhere, so never overwrite a saved copy without asking.
+    if (await store.get(value.id)) {
+      if (!confirm(`"${value.profile.name}" is already saved in this browser, possibly with your changes.\n\nOK = reset it to the original example\nCancel = open your saved copy`)) {
+        return select(value.id);
+      }
+    }
     biz = value;
     await save();
     select(biz.id);

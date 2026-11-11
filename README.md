@@ -54,6 +54,9 @@ tools/        scripts that check the mapping and build the docs
 - **Fictional case studies.** The kit is tested on five invented businesses, so no real business's weaknesses are published ([ADR 0002](docs/adr/0002-fictional-case-studies.md)).
 - **Public sources only.** The kit draws only on public frameworks and legislation.
 
+## Security
+Tested for XSS, hostile import files, prototype pollution, clickjacking, malformed links and CSV formula injection, with the fixes retested. See the [security testing report](docs/security-testing.md) and the [test harness](tools/security/).
+
 ## Run it locally
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1   # from the repo root

@@ -128,3 +128,10 @@ test('CSV export neutralises spreadsheet formulas', () => {
   const csv = toCsv(COLLECTIONS.accounts.fields, [{ service: 'Mail', kind: 'email', mfa: 'no', sharedLogin: 'yes', businessOwned: 'yes', formerUsersRemoved: 'na', usedBy: '', notes: '' }]);
   assert.ok(csv.includes('Mail,Email,,No,Yes,Yes,Not applicable,'));
 });
+
+test('security regression: objects and arrays in text fields become empty text', () => {
+  const v = validateBusiness({ schema: 'sme-toolkit/1', profile: { name: { evil: 1 }, location: ['x'], contact: 42 } }).value;
+  assert.equal(v.profile.name, 'Unnamed business');
+  assert.equal(v.profile.location, '');
+  assert.equal(v.profile.contact, '42');
+});

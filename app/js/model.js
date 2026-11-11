@@ -204,7 +204,7 @@ export function coerce(f, v) {
       const s = String(v ?? '');
       return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : '';
     }
-    default: return String(v ?? '').slice(0, MAX_TEXT);
+    default: return (typeof v === 'string' || typeof v === 'number' ? String(v) : '').slice(0, MAX_TEXT);
   }
 }
 
