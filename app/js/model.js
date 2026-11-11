@@ -36,6 +36,8 @@ export const PROFILE_FIELDS = [
   { key: 'location', label: 'Location', type: 'text' },
   { key: 'staff', label: 'Number of staff', type: 'number', min: 0 },
   { key: 'contact', label: 'Person responsible for security and data', type: 'text' },
+  { key: 'backup', label: 'Backup person', type: 'text' },
+  { key: 'itSupport', label: 'IT support / vendor contact', type: 'text' },
   { key: 'fictional', label: 'Fictional example business', type: 'bool' },
   { key: 'notes', label: 'Notes', type: 'textarea' },
 ];
@@ -106,7 +108,32 @@ export const COLLECTIONS = {
       { key: 'status', label: 'Status', type: 'select', options: [['open', 'Open'], ['in_progress', 'In progress'], ['done', 'Done']] },
     ],
   },
+  breaches: {
+    label: 'Breach register', singular: 'breach',
+    help: 'Every personal data breach, including ones you did not need to notify. Keep for at least 2 years. Fields follow the JPDP Guideline on Data Breach Notification para 14. (Toolkit control RS-3.)',
+    fields: [
+      { key: 'title', label: 'What happened', type: 'text', required: true },
+      { key: 'found', label: 'Date the business found out', type: 'date' },
+      { key: 'foundHow', label: 'How it was found / who reported it', type: 'text' },
+      { key: 'dataTypes', label: 'Personal data involved', type: 'text' },
+      { key: 'people', label: 'Estimated people affected', type: 'number', min: 0 },
+      { key: 'records', label: 'Estimated records affected', type: 'number', min: 0 },
+      { key: 'system', label: 'System or process that allowed it', type: 'text' },
+      { key: 'rootCause', label: 'Root cause', type: 'textarea' },
+      { key: 'consequences', label: 'Likely consequences for the people', type: 'textarea' },
+      { key: 'timeline', label: 'Timeline of events', type: 'textarea' },
+      { key: 'containment', label: 'Containment and recovery steps', type: 'textarea' },
+      { key: 'notifiedJPDP', label: 'Told JPDP?', type: 'select', options: [['unknown', 'Not decided'], ['yes', 'Yes'], ['not_required', 'Not required']] },
+      { key: 'jpdpDate', label: 'Date told JPDP', type: 'date' },
+      { key: 'notifiedPeople', label: 'Told the affected people?', type: 'select', options: [['unknown', 'Not decided'], ['yes', 'Yes'], ['not_required', 'Not required']] },
+      { key: 'peopleDate', label: 'Date told the people', type: 'date' },
+      { key: 'reason', label: 'Why not notified (if not required)', type: 'textarea' },
+      { key: 'status', label: 'Status', type: 'select', options: [['open', 'Open'], ['closed', 'Closed']] },
+    ],
+  },
 };
+
+export const CHECK_STATUS = [['unknown', 'Not answered'], ['yes', 'Yes'], ['partly', 'Partly'], ['no', 'No'], ['na', 'Not applicable']];
 
 export function newId() {
   const a = new Uint8Array(8);
@@ -129,6 +156,7 @@ export function defaultsFor(fields) {
 export function newBusiness(name = 'New business') {
   const b = { schema: SCHEMA, id: newId(), updated: new Date().toISOString(), profile: { ...defaultsFor(PROFILE_FIELDS), name } };
   for (const k of Object.keys(COLLECTIONS)) b[k] = [];
+  b.checklist = {};
   return b;
 }
 
@@ -184,5 +212,18 @@ export function validateBusiness(raw) {
     if (rows.length > MAX_ROWS) errors.push(`${c.label}: only the first ${MAX_ROWS} rows were loaded.`);
     b[k] = rows.slice(0, MAX_ROWS).filter((r) => r && typeof r === 'object').map((r) => cleanRecord(c.fields, r));
   }
+  b.checklist = cleanChecklist(raw.checklist);
   return { ok: true, errors, value: b };
+}
+
+// Checklist answers: { K01: { status, note }, ... }. Only well-formed ids and known statuses survive.
+function cleanChecklist(raw) {
+  const out = {};
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return out;
+  for (const [id, v] of Object.entries(raw).slice(0, 200)) {
+    if (!/^[A-Z]\d{2}$/.test(id) || !v || typeof v !== 'object') continue;
+    const status = CHECK_STATUS.some(([k]) => k === v.status) ? v.status : 'unknown';
+    out[id] = { status, note: String(v.note ?? '').slice(0, MAX_TEXT) };
+  }
+  return out;
 }

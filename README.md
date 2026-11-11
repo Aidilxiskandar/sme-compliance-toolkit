@@ -2,7 +2,7 @@
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
-> Status: 🚧 Phase 1. A working **web app** (`app/`) now holds the inventory, risk register and PDPA checks, with the five fictional businesses loaded as examples. Also done: the [PDPA summary](docs/pdpa-summary.md) checked against official JPDP sources, and the [framework mapping](docs/framework-mapping.md) of 32 controls. See the [roadmap](docs/roadmap.md).
+> Status: 🚧 Phases 1 and 2 done. The **web app** (`app/`) holds the inventory, risk register, PDPA checks, a 27-item PDPA checklist, a filled-in policy pack, an incident and breach plan, and a breach register, with five fictional businesses as examples. Next: Phase 3, the gap assessment. See the [roadmap](docs/roadmap.md).
 
 > **Not legal advice.** This is a starter kit to help a small business get the basics right. For legal questions about the PDPA, check the official sources or ask a lawyer.
 
@@ -27,13 +27,16 @@ A browser-only web app: everything stays on the user's device, with no server or
 - **Risk register:** 5×5 scoring and a heatmap.
 - **PDPA duties:** worked out automatically (JPDP registration, DPO, what a breach would trigger), with sources.
 - **Quick findings:** linked to the toolkit controls (no MFA, shared logins, default passwords, exposed devices).
+- **PDPA checklist:** 27 checks with a score, hiding items that don't apply.
+- **Policy pack and breach plan:** generated from the business's own details, ready to print or download.
+- **Breach register:** the fields the JPDP guideline requires, kept for 2 years.
 - **Exports:** CSV, JSON save/load and a printable report.
 
 ## Repository layout
 ```
 app/          the web app (no dependencies)
 tests/        unit tests (node --test)
-toolkit/      written templates (policies, plans) in Phase 2
+toolkit/      policy pack, PDPA checklist and breach plan templates
 case-study/   five fictional businesses used to test the kit
 docs/         roadmap, PDPA summary, framework mapping, decisions (adr/)
 data/         controls and NIST mapping data (JSON)

@@ -10,7 +10,9 @@
   "staff": 8,
   "contact": "Cikgu Kavitha (owner)",
   "notes": "Fictional. See case-study/companies/05-pusat-tuisyen-cemerlang.md.",
-  "fictional": true
+  "fictional": true,
+  "backup": "Centre admin",
+  "itSupport": "None"
  },
  "assets": [
   {
@@ -285,5 +287,137 @@
    "due": "2027-01-31",
    "status": "open"
   }
- ]
+ ],
+ "breaches": [
+  {
+   "id": "b-1",
+   "title": "Stranger joined an online class and posted inappropriate messages",
+   "found": "2026-10-07",
+   "foundHow": "Tutor and a parent",
+   "dataTypes": "Children's names and faces visible in the class; chat messages",
+   "people": 18,
+   "records": 0,
+   "system": "Video-call link reused weekly and posted in groups",
+   "rootCause": "Class link shared publicly; no waiting room",
+   "consequences": "Distress to children; their names and faces seen by an unknown adult",
+   "timeline": "7 Oct, 8:15pm: unknown user joined, removed after about 3 minutes",
+   "containment": "Removed the user; new link for that class only",
+   "notifiedJPDP": "not_required",
+   "jpdpDate": "",
+   "notifiedPeople": "yes",
+   "peopleDate": "2026-10-08",
+   "reason": "18 children affected, no sensitive, financial or ID data, so not notifiable to JPDP; parents informed the next day. Re-assess if recordings are found.",
+   "status": "closed"
+  }
+ ],
+ "checklist": {
+  "K01": {
+   "status": "unknown",
+   "note": ""
+  },
+  "K02": {
+   "status": "no",
+   "note": ""
+  },
+  "K03": {
+   "status": "partly",
+   "note": ""
+  },
+  "K04": {
+   "status": "no",
+   "note": ""
+  },
+  "N01": {
+   "status": "no",
+   "note": ""
+  },
+  "N02": {
+   "status": "partly",
+   "note": ""
+  },
+  "N03": {
+   "status": "no",
+   "note": ""
+  },
+  "N04": {
+   "status": "no",
+   "note": "Photos of minors posted without written parental consent."
+  },
+  "N05": {
+   "status": "partly",
+   "note": ""
+  },
+  "N06": {
+   "status": "na",
+   "note": ""
+  },
+  "N07": {
+   "status": "no",
+   "note": ""
+  },
+  "D01": {
+   "status": "partly",
+   "note": ""
+  },
+  "D02": {
+   "status": "no",
+   "note": ""
+  },
+  "D03": {
+   "status": "no",
+   "note": ""
+  },
+  "D04": {
+   "status": "partly",
+   "note": ""
+  },
+  "D05": {
+   "status": "unknown",
+   "note": ""
+  },
+  "S01": {
+   "status": "no",
+   "note": ""
+  },
+  "S02": {
+   "status": "no",
+   "note": ""
+  },
+  "S03": {
+   "status": "na",
+   "note": ""
+  },
+  "S04": {
+   "status": "no",
+   "note": ""
+  },
+  "A01": {
+   "status": "no",
+   "note": ""
+  },
+  "A02": {
+   "status": "partly",
+   "note": ""
+  },
+  "A03": {
+   "status": "no",
+   "note": ""
+  },
+  "B01": {
+   "status": "no",
+   "note": ""
+  },
+  "B02": {
+   "status": "no",
+   "note": ""
+  },
+  "B03": {
+   "status": "no",
+   "note": ""
+  },
+  "B04": {
+   "status": "no",
+   "note": ""
+  }
+ }
 }

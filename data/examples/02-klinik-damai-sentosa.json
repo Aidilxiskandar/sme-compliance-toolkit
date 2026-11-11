@@ -10,7 +10,9 @@
   "staff": 9,
   "contact": "Dr. Lim (owner)",
   "notes": "Fictional. See case-study/companies/02-klinik-damai-sentosa.md.",
-  "fictional": true
+  "fictional": true,
+  "backup": "Second doctor",
+  "itSupport": "Clinic system vendor (remote support line)"
  },
  "assets": [
   {
@@ -327,5 +329,137 @@
    "due": "2026-12-31",
    "status": "open"
   }
- ]
+ ],
+ "breaches": [
+  {
+   "id": "b-1",
+   "title": "Tech-support scam call from reception PC",
+   "found": "2026-09-03",
+   "foundHow": "Dr. Lim walked in during the call",
+   "dataTypes": "Possibly everything reachable from the reception PC: patient registrations, webmail with lab results",
+   "people": 14000,
+   "records": 0,
+   "system": "Reception PC (shared login)",
+   "rootCause": "Staff member followed a fake \"your PC is infected\" pop-up and called the number",
+   "consequences": "Unknown. If remote access was installed, patient health data may be exposed",
+   "timeline": "3 Sep: pop-up, call made, ended after about 10 minutes. PC not checked since",
+   "containment": "None yet: PC needs checking for remote-access software",
+   "notifiedJPDP": "unknown",
+   "jpdpDate": "",
+   "notifiedPeople": "unknown",
+   "peopleDate": "",
+   "reason": "",
+   "status": "open"
+  }
+ ],
+ "checklist": {
+  "K01": {
+   "status": "no",
+   "note": "Clinic is in the Health class but has not registered."
+  },
+  "K02": {
+   "status": "no",
+   "note": ""
+  },
+  "K03": {
+   "status": "partly",
+   "note": ""
+  },
+  "K04": {
+   "status": "no",
+   "note": ""
+  },
+  "N01": {
+   "status": "no",
+   "note": ""
+  },
+  "N02": {
+   "status": "partly",
+   "note": ""
+  },
+  "N03": {
+   "status": "no",
+   "note": ""
+  },
+  "N04": {
+   "status": "na",
+   "note": ""
+  },
+  "N05": {
+   "status": "yes",
+   "note": ""
+  },
+  "N06": {
+   "status": "na",
+   "note": ""
+  },
+  "N07": {
+   "status": "no",
+   "note": ""
+  },
+  "D01": {
+   "status": "yes",
+   "note": ""
+  },
+  "D02": {
+   "status": "yes",
+   "note": ""
+  },
+  "D03": {
+   "status": "no",
+   "note": ""
+  },
+  "D04": {
+   "status": "yes",
+   "note": ""
+  },
+  "D05": {
+   "status": "unknown",
+   "note": ""
+  },
+  "S01": {
+   "status": "partly",
+   "note": "Antivirus only."
+  },
+  "S02": {
+   "status": "no",
+   "note": ""
+  },
+  "S03": {
+   "status": "no",
+   "note": ""
+  },
+  "S04": {
+   "status": "no",
+   "note": ""
+  },
+  "A01": {
+   "status": "partly",
+   "note": ""
+  },
+  "A02": {
+   "status": "yes",
+   "note": ""
+  },
+  "A03": {
+   "status": "no",
+   "note": ""
+  },
+  "B01": {
+   "status": "no",
+   "note": ""
+  },
+  "B02": {
+   "status": "no",
+   "note": ""
+  },
+  "B03": {
+   "status": "no",
+   "note": ""
+  },
+  "B04": {
+   "status": "no",
+   "note": ""
+  }
+ }
 }

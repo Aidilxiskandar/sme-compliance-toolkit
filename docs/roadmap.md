@@ -16,11 +16,12 @@ Pace: about 4 to 5 hours a week.
 - [x] Filled in for the five case-study businesses (`data/examples/`, loaded in the app)
 - **Deliverable:** mapping + web app with inventory, risk register and PDPA checks + five filled examples ✅
 
-## Phase 2: Policies and plans (Jan to Feb 2027)
-- [ ] Template 3: plain-language policy set
-- [ ] Template 4: PDPA checklist
-- [ ] Template 5: incident response and breach notification one-pager
-- **Deliverable:** policy pack an owner can adopt in an afternoon
+## Phase 2: Policies and plans (done 11 Nov 2026)
+- [x] Template 3: six plain-language policies ([toolkit/policies/](../toolkit/policies/)), filled in by the app's Policies page
+- [x] Template 4: PDPA checklist, 27 checks verified against the Act and JPDP guidelines ([toolkit/pdpa-checklist.md](../toolkit/pdpa-checklist.md)), interactive in the app with a score
+- [x] Template 5: incident and breach plan ([toolkit/incident-breach-plan.md](../toolkit/incident-breach-plan.md)), generated per business in the app, plus a breach register page (DBN Guideline para 14)
+- [x] Five example businesses filled in: checklist answers, contacts and breach-register entries
+- **Deliverable:** policy pack an owner can adopt in an afternoon ✅
 
 ## Phase 3: Measure (Mar to Apr 2027)
 - [ ] Template 6: gap assessment with maturity scoring

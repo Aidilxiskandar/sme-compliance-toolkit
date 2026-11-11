@@ -10,7 +10,9 @@
   "staff": 12,
   "contact": "Pn. Rahim (partner)",
   "notes": "Fictional. See case-study/companies/04-tan-rahim-associates.md.",
-  "fictional": true
+  "fictional": true,
+  "backup": "Mr. Tan (partner)",
+  "itSupport": "Freelance IT technician (on call)"
  },
  "assets": [
   {
@@ -291,5 +293,137 @@
    "due": "2027-03-31",
    "status": "open"
   }
- ]
+ ],
+ "breaches": [
+  {
+   "id": "b-1",
+   "title": "Client nearly paid fake invoice sent in an existing email thread",
+   "found": "2026-08-11",
+   "foundHow": "Client phoned to confirm the \"new bank account\"",
+   "dataTypes": "Client invoice details; possibly the full mailbox of one staff member",
+   "people": 0,
+   "records": 0,
+   "system": "Cloud email without MFA (suspected mailbox compromise)",
+   "rootCause": "Not investigated: likely a stolen password on a staff or client mailbox",
+   "consequences": "If a firm mailbox was accessed: client financial data and IC copies exposed",
+   "timeline": "11 Aug: fake invoice in a real thread; client called; no payment made",
+   "containment": "Warned the client. Mailbox sign-in logs NOT checked yet",
+   "notifiedJPDP": "unknown",
+   "jpdpDate": "",
+   "notifiedPeople": "unknown",
+   "peopleDate": "",
+   "reason": "Cannot decide without checking the sign-in logs: if a firm mailbox was accessed, it is likely notifiable.",
+   "status": "open"
+  }
+ ],
+ "checklist": {
+  "K01": {
+   "status": "yes",
+   "note": "Registered under the Service class (accounting)."
+  },
+  "K02": {
+   "status": "no",
+   "note": ""
+  },
+  "K03": {
+   "status": "yes",
+   "note": ""
+  },
+  "K04": {
+   "status": "partly",
+   "note": ""
+  },
+  "N01": {
+   "status": "partly",
+   "note": ""
+  },
+  "N02": {
+   "status": "yes",
+   "note": ""
+  },
+  "N03": {
+   "status": "na",
+   "note": ""
+  },
+  "N04": {
+   "status": "na",
+   "note": ""
+  },
+  "N05": {
+   "status": "na",
+   "note": ""
+  },
+  "N06": {
+   "status": "na",
+   "note": ""
+  },
+  "N07": {
+   "status": "partly",
+   "note": ""
+  },
+  "D01": {
+   "status": "yes",
+   "note": ""
+  },
+  "D02": {
+   "status": "partly",
+   "note": ""
+  },
+  "D03": {
+   "status": "no",
+   "note": ""
+  },
+  "D04": {
+   "status": "yes",
+   "note": ""
+  },
+  "D05": {
+   "status": "partly",
+   "note": ""
+  },
+  "S01": {
+   "status": "partly",
+   "note": ""
+  },
+  "S02": {
+   "status": "no",
+   "note": ""
+  },
+  "S03": {
+   "status": "partly",
+   "note": ""
+  },
+  "S04": {
+   "status": "partly",
+   "note": ""
+  },
+  "A01": {
+   "status": "partly",
+   "note": ""
+  },
+  "A02": {
+   "status": "yes",
+   "note": ""
+  },
+  "A03": {
+   "status": "partly",
+   "note": ""
+  },
+  "B01": {
+   "status": "no",
+   "note": ""
+  },
+  "B02": {
+   "status": "partly",
+   "note": "Staff told to report phishing, but no written process."
+  },
+  "B03": {
+   "status": "no",
+   "note": ""
+  },
+  "B04": {
+   "status": "no",
+   "note": ""
+  }
+ }
 }

@@ -2,6 +2,7 @@ import { h } from '../dom.js';
 import { SECTORS, LEGAL_FORMS } from '../model.js';
 import { registration, dpo, breachImpact, findings } from '../pdpa.js';
 import { score, level, LEVEL_LABEL, matrix, topRisks } from '../risk.js';
+import { checklistScore } from '../checklist.js';
 
 const STATUS = {
   yes: ['Required', 'pill-bad'],
@@ -14,7 +15,7 @@ const STATUS = {
 const label = (list, k) => (list.find(([x]) => x === k) || [, k])[1];
 const pill = (status) => h('span', { class: `pill ${STATUS[status][1]}` }, STATUS[status][0]);
 
-export function renderDashboard(root, biz) {
+export function renderDashboard(root, biz, checklistItems = []) {
   const p = biz.profile;
   const reg = registration(p);
   const d = dpo(biz.dataSets);
@@ -36,6 +37,8 @@ export function renderDashboard(root, biz) {
       stat(biz.accounts.length, 'online accounts', '#/accounts'),
       stat(people, 'people whose data is held (data sets may overlap)', '#/data'),
       stat(serious, 'high or critical open risks', '#/risks', serious > 0),
+      stat(`${checklistScore(checklistItems, biz).percent}%`, 'of the PDPA checklist in place', '#/checklist'),
+      stat(biz.breaches.filter((b) => b.status === 'open').length, 'open breaches in the register', '#/breaches', biz.breaches.some((b) => b.status === 'open')),
     ),
 
     h('section', { class: 'card' },

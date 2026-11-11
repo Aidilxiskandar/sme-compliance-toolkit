@@ -10,7 +10,9 @@
   "staff": 4,
   "contact": "Nurul (co-founder)",
   "notes": "Fictional. See case-study/companies/03-rumah-batik-lestari.md.",
-  "fictional": true
+  "fictional": true,
+  "backup": "Aisyah (co-founder)",
+  "itSupport": "None (founders handle IT)"
  },
  "assets": [
   {
@@ -289,5 +291,137 @@
    "due": "2026-12-31",
    "status": "open"
   }
- ]
+ ],
+ "breaches": [
+  {
+   "id": "b-1",
+   "title": "Customers receiving fake \"parcel stuck at customs\" WhatsApp messages",
+   "found": "2026-10-20",
+   "foundHow": "Customers messaged the shop",
+   "dataTypes": "Order details: names, phone numbers, items bought, possibly addresses",
+   "people": 15000,
+   "records": 0,
+   "system": "Unknown: open-link cloud folder, shared seller logins or ex-freelancer access",
+   "rootCause": "Under investigation",
+   "consequences": "Customers being scammed out of money (financial loss = significant harm)",
+   "timeline": "First customer report 20 Oct; about 12 reports by 1 Nov",
+   "containment": "None yet",
+   "notifiedJPDP": "unknown",
+   "jpdpDate": "",
+   "notifiedPeople": "unknown",
+   "peopleDate": "",
+   "reason": "Need to decide now: likely notifiable (financial loss risk, over 1,000 people). The 72 hours may already have passed, so a late notice with reasons is needed.",
+   "status": "open"
+  }
+ ],
+ "checklist": {
+  "K01": {
+   "status": "unknown",
+   "note": ""
+  },
+  "K02": {
+   "status": "no",
+   "note": ""
+  },
+  "K03": {
+   "status": "partly",
+   "note": ""
+  },
+  "K04": {
+   "status": "no",
+   "note": ""
+  },
+  "N01": {
+   "status": "partly",
+   "note": "Website notice copied from another shop and names the wrong business."
+  },
+  "N02": {
+   "status": "partly",
+   "note": ""
+  },
+  "N03": {
+   "status": "na",
+   "note": ""
+  },
+  "N04": {
+   "status": "na",
+   "note": ""
+  },
+  "N05": {
+   "status": "no",
+   "note": ""
+  },
+  "N06": {
+   "status": "na",
+   "note": ""
+  },
+  "N07": {
+   "status": "no",
+   "note": ""
+  },
+  "D01": {
+   "status": "yes",
+   "note": ""
+  },
+  "D02": {
+   "status": "yes",
+   "note": ""
+  },
+  "D03": {
+   "status": "no",
+   "note": ""
+  },
+  "D04": {
+   "status": "yes",
+   "note": ""
+  },
+  "D05": {
+   "status": "unknown",
+   "note": ""
+  },
+  "S01": {
+   "status": "partly",
+   "note": ""
+  },
+  "S02": {
+   "status": "no",
+   "note": ""
+  },
+  "S03": {
+   "status": "no",
+   "note": ""
+  },
+  "S04": {
+   "status": "no",
+   "note": ""
+  },
+  "A01": {
+   "status": "no",
+   "note": ""
+  },
+  "A02": {
+   "status": "yes",
+   "note": ""
+  },
+  "A03": {
+   "status": "no",
+   "note": ""
+  },
+  "B01": {
+   "status": "no",
+   "note": ""
+  },
+  "B02": {
+   "status": "no",
+   "note": ""
+  },
+  "B03": {
+   "status": "no",
+   "note": ""
+  },
+  "B04": {
+   "status": "no",
+   "note": ""
+  }
+ }
 }

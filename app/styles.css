@@ -90,7 +90,28 @@ th { color: var(--muted); font-weight: 600; }
 .empty { color: var(--muted); font-style: italic; }
 .status { color: var(--ok); }
 .prose { max-width: 760px; }
+/* Phase 2: documents, checklist */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.chips a { padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; font-size: 14px; color: var(--muted); }
+.chips a.active { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.doc { max-width: 820px; }
+.md h2 { font-size: 1.4rem; margin: 0 0 8px; }
+.md h3 { font-size: 1.1rem; margin: 20px 0 6px; }
+.md p, .md li { max-width: 72ch; }
+.md ul, .md ol { padding-left: 22px; }
+.md li.check { list-style: none; margin-left: -22px; }
+.md .box { font-size: 1.1em; }
+.md hr { border: 0; border-top: 1px solid var(--border); margin: 16px 0; }
+.md code { font-family: ui-monospace, Menlo, monospace; font-size: 0.9em; }
+.note-inline { background: var(--warn-bg); color: var(--warn); padding: 8px 12px; border-radius: 8px; }
+.check-item { padding: 12px 16px; margin-bottom: 8px; border-left: 4px solid var(--border); }
+.check-item.status-yes { border-left-color: var(--ok); }
+.check-item.status-partly { border-left-color: var(--warn); }
+.check-item.status-no { border-left-color: var(--danger); }
+.check-q { margin-bottom: 4px; }
+.check-row { display: grid; grid-template-columns: 170px 1fr; gap: 8px; margin-bottom: 6px; }
 @media (max-width: 700px) {
+  .check-row { grid-template-columns: 1fr; }
   main { overflow-wrap: anywhere; }
   .risk-layout { grid-template-columns: 1fr; }
   .table-wrap table, .table-wrap tbody { display: block; width: 100%; }
@@ -103,7 +124,8 @@ th { color: var(--muted); font-weight: 600; }
   .bar select { max-width: 100%; flex: 1 1 200px; }
 }
 @media print {
-  header, footer, .no-print, .row-actions, .note { display: none !important; }
+  header, footer, .no-print, .row-actions, .note, .chips { display: none !important; }
+  .doc { break-after: page; border: 0; padding: 0; }
   body { background: #fff; color: #000; }
   .card { break-inside: avoid; border-color: #999; }
 }

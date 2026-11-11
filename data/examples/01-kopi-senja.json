@@ -10,7 +10,9 @@
   "staff": 6,
   "contact": "Hafiz (owner)",
   "notes": "Fictional. See case-study/companies/01-kopi-senja.md.",
-  "fictional": true
+  "fictional": true,
+  "backup": "Supervisor (morning shift)",
+  "itSupport": "ISP helpline; DVR installer"
  },
  "assets": [
   {
@@ -310,5 +312,137 @@
    "due": "2027-01-15",
    "status": "open"
   }
- ]
+ ],
+ "breaches": [
+  {
+   "id": "b-1",
+   "title": "Instagram account taken over after fake copyright page",
+   "found": "2025-08-14",
+   "foundHow": "Owner noticed he was logged out; customers reported odd posts",
+   "dataTypes": "Customer DMs (names, some phone numbers)",
+   "people": 150,
+   "records": 150,
+   "system": "Instagram account without MFA",
+   "rootCause": "Owner entered password on a phishing page",
+   "consequences": "Possible scam messages to customers who had DMed the cafe",
+   "timeline": "Phishing email on 14 Aug; account recovered via platform support on 21 Aug",
+   "containment": "Recovered account, changed password; MFA still not turned on",
+   "notifiedJPDP": "not_required",
+   "jpdpDate": "",
+   "notifiedPeople": "not_required",
+   "peopleDate": "",
+   "reason": "DMs held names and a few phone numbers only: no sensitive, financial or ID data, under 1,000 people.",
+   "status": "closed"
+  }
+ ],
+ "checklist": {
+  "K01": {
+   "status": "na",
+   "note": ""
+  },
+  "K02": {
+   "status": "no",
+   "note": "No DPO needed by numbers; CCTV grey area not yet written down."
+  },
+  "K03": {
+   "status": "partly",
+   "note": ""
+  },
+  "K04": {
+   "status": "no",
+   "note": ""
+  },
+  "N01": {
+   "status": "no",
+   "note": ""
+  },
+  "N02": {
+   "status": "no",
+   "note": ""
+  },
+  "N03": {
+   "status": "na",
+   "note": ""
+  },
+  "N04": {
+   "status": "na",
+   "note": ""
+  },
+  "N05": {
+   "status": "no",
+   "note": "Promos sent to the whole loyalty list."
+  },
+  "N06": {
+   "status": "no",
+   "note": ""
+  },
+  "N07": {
+   "status": "no",
+   "note": ""
+  },
+  "D01": {
+   "status": "yes",
+   "note": ""
+  },
+  "D02": {
+   "status": "partly",
+   "note": ""
+  },
+  "D03": {
+   "status": "no",
+   "note": ""
+  },
+  "D04": {
+   "status": "partly",
+   "note": ""
+  },
+  "D05": {
+   "status": "unknown",
+   "note": ""
+  },
+  "S01": {
+   "status": "no",
+   "note": ""
+  },
+  "S02": {
+   "status": "no",
+   "note": ""
+  },
+  "S03": {
+   "status": "na",
+   "note": ""
+  },
+  "S04": {
+   "status": "no",
+   "note": ""
+  },
+  "A01": {
+   "status": "no",
+   "note": ""
+  },
+  "A02": {
+   "status": "partly",
+   "note": ""
+  },
+  "A03": {
+   "status": "no",
+   "note": ""
+  },
+  "B01": {
+   "status": "no",
+   "note": ""
+  },
+  "B02": {
+   "status": "no",
+   "note": ""
+  },
+  "B03": {
+   "status": "no",
+   "note": ""
+  },
+  "B04": {
+   "status": "no",
+   "note": ""
+  }
+ }
 }

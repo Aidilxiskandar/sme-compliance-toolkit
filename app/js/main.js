@@ -5,6 +5,7 @@ import { download } from './export.js';
 import { renderCollection, slug } from './views/collection.js';
 import { renderDashboard, scorePill } from './views/dashboard.js';
 import { renderProfile, renderControls, renderStart, renderAbout } from './views/pages.js';
+import { renderPolicies, renderChecklist, renderPlan } from './views/phase2.js';
 
 const EXAMPLES = [
   { file: '01-kopi-senja.json', name: 'Kopi Senja', desc: 'cafe, 6 staff' },
@@ -17,7 +18,8 @@ const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
 
 const TABS = [
   ['dashboard', 'Dashboard'], ['profile', 'Profile'], ['assets', 'Devices'], ['accounts', 'Accounts'],
-  ['data', 'Personal data'], ['risks', 'Risks'], ['controls', 'Controls'],
+  ['data', 'Personal data'], ['risks', 'Risks'], ['checklist', 'PDPA checklist'], ['policies', 'Policies'],
+  ['plan', 'Breach plan'], ['breaches', 'Breach register'], ['controls', 'Controls'],
 ];
 
 const COLUMNS = {
@@ -25,10 +27,12 @@ const COLUMNS = {
   accounts: ['service', 'kind', 'usedBy', 'mfa', 'sharedLogin', 'businessOwned'],
   dataSets: ['name', 'subjects', 'count', 'sensitive', 'storedIn', 'notice'],
   risks: ['title', 'treatment', 'owner', 'status'],
+  breaches: ['title', 'found', 'people', 'notifiedJPDP', 'notifiedPeople', 'status'],
 };
 
 let biz = null;
 let controls = [];
+let checklistItems = [];
 const main = document.getElementById('main');
 const bar = document.getElementById('bar');
 const note = document.getElementById('note');
@@ -39,6 +43,12 @@ async function init() {
     controls = (await res.json()).controls || [];
   } catch {
     controls = [];
+  }
+  try {
+    const res = await fetch('../data/pdpa-checklist.json');
+    checklistItems = (await res.json()).items || [];
+  } catch {
+    checklistItems = [];
   }
   const active = store.getActive();
   if (active) biz = await store.get(active);
@@ -80,7 +90,7 @@ async function drawBar() {
 }
 
 function currentRoute() {
-  return location.hash.replace(/^#\/?/, '').split('/');
+  return location.hash.replace(/^#\/?/, '').split('/').map((x) => decodeURIComponent(x));
 }
 
 async function render() {
@@ -99,8 +109,12 @@ async function render() {
     case 'accounts': return renderCollection(main, biz, 'accounts', { columns: COLUMNS.accounts, onSave: save });
     case 'data': return renderCollection(main, biz, 'dataSets', { columns: COLUMNS.dataSets, onSave: save });
     case 'risks': return renderCollection(main, biz, 'risks', { columns: COLUMNS.risks, extra: { header: 'Score', cell: scorePill }, onSave: save });
+    case 'breaches': return renderCollection(main, biz, 'breaches', { columns: COLUMNS.breaches, onSave: save });
+    case 'checklist': return renderChecklist(main, biz, checklistItems, save);
+    case 'policies': return renderPolicies(main, biz, arg);
+    case 'plan': return renderPlan(main, biz);
     case 'controls': return renderControls(main, biz, controls, arg);
-    default: return renderDashboard(main, biz);
+    default: return renderDashboard(main, biz, checklistItems);
   }
 }
 
