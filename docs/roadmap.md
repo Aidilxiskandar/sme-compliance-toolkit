@@ -30,8 +30,10 @@ Pace: about 4 to 5 hours a week.
 - [x] Action plan with rough costs for each business, then the "after" assessment
 - **Deliverable:** scored before/after for five businesses, with costs ✅ ([phase3-results.md](phase3-results.md))
 
-## Phase 4: Publish and apply (2027)
-- [ ] Case study write-up (comparing the five businesses)
+## Phase 4: Publish and apply (started 11 Nov 2026)
+- [x] Case study write-up comparing the five businesses ([case-study.md](case-study.md))
 - [ ] Optional Bahasa Malaysia version
-- [ ] Choose licence, make the repo public, LinkedIn post
+- [x] Licence: MIT
+- [ ] Full-history leak scan, make the repo public, publish the app on GitHub Pages
+- [ ] LinkedIn post (later)
 - [ ] Trial with 1 to 2 other small businesses

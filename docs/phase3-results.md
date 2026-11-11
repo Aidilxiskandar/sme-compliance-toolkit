@@ -30,7 +30,7 @@
 | Tan & Rahim Associates | 31% | 22% | **58%** | 6 | 4 / 8 | 8 / 8 | RM1,300 + RM250/mo, 28 h | 2 (RM5,000) |
 | Pusat Tuisyen Cemerlang | 11% | 3% | **47%** | 4 | 7 / 8 | 8 / 8 | RM0 + RM0/mo, 17 h | – |
 
-**Across all five:** asking the owner alone would have found **23 of 40** planted gaps (57%); checking the evidence found **40 of 40**. There were **37 assurance gaps**, controls the owner believed were in place but weren't. The low-cost fixes cost **RM3,850 one-off and RM370 a month in total** (about 112 hours of work across the five), and leave **3 of 40** planted gaps open.
+**Across all five:** asking the owner alone would have found **23 of 40** planted gaps (57.5%); checking the evidence found **40 of 40**. There were **37 assurance gaps**, controls the owner believed were in place but weren't. The low-cost fixes cost **RM3,850 one-off and RM370 a month in total** (about 112 hours of work across the five), and leave **3 of 40** planted gaps open.
 
 ## What this shows
 

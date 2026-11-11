@@ -2,7 +2,11 @@
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
-> Status: ✅ Phases 1 to 3 done. The **web app** (`app/`) covers inventory, risks, PDPA duties and checklist, policies, breach plan and register, a **gap assessment** and an action plan, tested on five fictional businesses. Headline result: asking owners alone found only **23 of 40** planted gaps; checking the evidence found all 40, and low-cost fixes (about RM3,850 one-off across five businesses) raised verified scores from 3–22% to 47–58%. See [Phase 3 results](docs/phase3-results.md) and the [roadmap](docs/roadmap.md).
+> **Live app:** https://aidilxiskandar.github.io/sme-compliance-toolkit/ (runs in your browser; your data stays on your device)
+>
+> **Case study:** [What five small Malaysian businesses get wrong about security, and what fixing it costs](docs/case-study.md)
+
+> Status: ✅ Phases 1 to 4 done. Headline result from the five fictional businesses: asking owners alone found only **23 of 40** planted gaps; checking the evidence found all 40, and low-cost fixes (about RM3,850 one-off across five businesses) raised verified scores from 3–22% to 47–58%. See [Phase 3 results](docs/phase3-results.md) and the [roadmap](docs/roadmap.md).
 
 > **Not legal advice.** This is a starter kit to help a small business get the basics right. For legal questions about the PDPA, check the official sources or ask a lawyer.
 
@@ -49,3 +53,13 @@ tools/        scripts that check the mapping and build the docs
 - **Own words only.** ISO/IEC 27001 and CIS Controls text is not reproduced. Controls are cited by number, and every template is original writing.
 - **Fictional case studies.** The kit is tested on five invented businesses, so no real business's weaknesses are published ([ADR 0002](docs/adr/0002-fictional-case-studies.md)).
 - **Public sources only.** The kit draws only on public frameworks and legislation.
+
+## Run it locally
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1   # from the repo root
+npm test                                       # 28 tests, no packages to install
+```
+Open http://127.0.0.1:8000/. See [app/README.md](app/README.md).
+
+## License
+[MIT](LICENSE). Small businesses are welcome to adopt the policy templates for their own use.
