@@ -8,8 +8,8 @@ Pace: about 4 to 5 hours a week.
 - [x] Create five fictional case-study businesses ([ADR 0002](adr/0002-fictional-case-studies.md))
 
 ## Phase 1: Research and inventory (Nov to Dec 2026)
-- [ ] Read the NIST CSF 2.0 Small Business Quick-Start Guide
-- [ ] Summarise PDPA 2010 + 2024 amendments from official sources (breach notification, DPO, processors, start dates, penalties)
+- [x] Read the NIST CSF 2.0 Small Business Quick-Start Guide ([notes](csf-small-business-notes.md))
+- [x] Summarise PDPA 2010 + 2024 amendments from official sources ([pdpa-summary.md](pdpa-summary.md)); 5 open points flagged
 - [ ] Framework mapping: CSF 2.0 ↔ ISO 27001:2022 Annex A ↔ CIS v8.1 IG1 (`docs/framework-mapping.md`)
 - [ ] Template 1: asset and personal-data inventory
 - [ ] Template 2: risk register

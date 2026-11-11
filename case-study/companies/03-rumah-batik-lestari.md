@@ -12,7 +12,7 @@
 ## How the business runs
 - Sells on two marketplace platforms, a social-commerce shop with **live-stream selling**, and its own website on a hosted e-commerce platform.
 - Payments go through the platforms and a payment gateway. The shop never sees card numbers, but it does get names, addresses and phone numbers for every order.
-- Runs paid ads from a social media business account. The ad account has a company credit card attached.
+- Runs paid ads from a social media business account. The website has the platform's **ad tracking pixel** installed and builds retargeting audiences from visitors' browsing and purchases. The ad account has a company credit card attached.
 - A freelance admin (works remotely, not an employee) manages the social accounts and replies to DMs.
 - Order lists are **exported to spreadsheets** for packing and courier booking, then printed.
 - Two laptops (one per founder) and their phones. Banking on the business account through mobile banking.

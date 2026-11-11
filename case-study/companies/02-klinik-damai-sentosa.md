@@ -18,6 +18,7 @@
 - The vendor connects with a remote-access tool for support.
 
 ## Personal data held
+- About **14,000 patient records** built up over 6 years.
 - Patient registration: name, IC number, date of birth, address, phone, employer.
 - **Medical records, diagnoses, prescriptions and lab results: sensitive personal data under the PDPA**, which carries stricter rules than ordinary data.
 - Staff records and the locum's practising certificate copies.

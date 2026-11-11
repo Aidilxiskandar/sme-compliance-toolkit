@@ -18,7 +18,7 @@
 
 ## Personal data held
 - Hundreds of client companies and their directors: IC/passport copies, addresses, income, bank details, tax numbers.
-- Client employees' payroll data (names, salaries, IC numbers, bank accounts).
+- Client employees' payroll data (names, salaries, IC numbers, bank accounts): about **11,000 employees** across 40 payroll clients.
 - Logins to client portals, kept in a spreadsheet.
 
 ## What the owners say

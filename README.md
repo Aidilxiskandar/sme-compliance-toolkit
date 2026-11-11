@@ -2,7 +2,7 @@
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
-> Status: 🚧 Phase 0. The plan and repo are set up. See the [roadmap](docs/roadmap.md).
+> Status: 🚧 Phase 1 (research). Done so far: [PDPA summary](docs/pdpa-summary.md) checked against official JPDP sources, and [notes on the NIST CSF 2.0 small-business guide](docs/csf-small-business-notes.md). See the [roadmap](docs/roadmap.md).
 
 > **Not legal advice.** This is a starter kit to help a small business get the basics right. For legal questions about the PDPA, check the official sources or ask a lawyer.
 
