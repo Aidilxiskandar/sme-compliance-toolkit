@@ -1,0 +1,1227 @@
+{
+ "source": "NIST CSF 2.0 Reference Tool export, all informative references (csrc.nist.gov), downloaded 2026-11-11",
+ "subcategories": [
+  {
+   "id": "GV.OC-01",
+   "text": "The organizational mission is understood and informs cybersecurity risk management",
+   "iso": [
+    "Cl.8.1",
+    "Cl.8.2",
+    "Cl.8.3"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OC-02",
+   "text": "Internal and external stakeholders are understood, and their needs and expectations regarding cybersecurity risk management are understood and considered",
+   "iso": [
+    "Cl.4.1",
+    "Cl.4.2",
+    "Cl.4.4",
+    "Cl.6.1",
+    "Cl.8.1",
+    "Cl.8.2",
+    "Cl.8.3"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OC-03",
+   "text": "Legal, regulatory, and contractual requirements regarding cybersecurity - including privacy and civil liberties obligations - are understood and managed",
+   "iso": [
+    "Cl.4.2",
+    "5.20",
+    "5.31"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OC-04",
+   "text": "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated",
+   "iso": [
+    "Cl.4.2",
+    "5.20",
+    "5.31"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OC-05",
+   "text": "Outcomes, capabilities, and services that the organization depends on are understood and communicated",
+   "iso": [
+    "5.3",
+    "Cl.6.1",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-01",
+   "text": "Risk management objectives are established and agreed to by organizational stakeholders",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-02",
+   "text": "Risk appetite and risk tolerance statements are established, communicated, and maintained",
+   "iso": [
+    "Cl.6.1.2",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-03",
+   "text": "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes",
+   "iso": [
+    "Cl.6.1.3",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-04",
+   "text": "Strategic direction that describes appropriate risk response options is established and communicated",
+   "iso": [
+    "Cl.6.1.3",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-05",
+   "text": "Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.3",
+    "5.1",
+    "5.19"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-06",
+   "text": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated",
+   "iso": [
+    "Cl.6.1.2",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RM-07",
+   "text": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions",
+   "iso": [
+    "Cl.6.11",
+    "Cl.5.3",
+    "5.2",
+    "5.4"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RR-01",
+   "text": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving",
+   "iso": [
+    "Cl.7.2",
+    "5.4"
+   ],
+   "cis": [
+    "14.1"
+   ]
+  },
+  {
+   "id": "GV.RR-02",
+   "text": "Roles, responsibilities, and authorities related to cybersecurity risk management are established, communicated, understood, and enforced",
+   "iso": [
+    "Cl.7.2"
+   ],
+   "cis": [
+    "14.9"
+   ]
+  },
+  {
+   "id": "GV.RR-03",
+   "text": "Adequate resources are allocated commensurate with the cybersecurity risk strategy, roles, responsibilities, and policies",
+   "iso": [
+    "Cl.7.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.RR-04",
+   "text": "Cybersecurity is included in human resources practices",
+   "iso": [
+    "Cl.7.3",
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5",
+    "6.6",
+    "6.7",
+    "6.8",
+    "Cl.5.2",
+    "5.3",
+    "5.36"
+   ],
+   "cis": [
+    "6.1",
+    "6.2"
+   ]
+  },
+  {
+   "id": "GV.PO-01",
+   "text": "Policy for managing cybersecurity risks is established based on organizational context, cybersecurity strategy, and priorities and is communicated and enforced",
+   "iso": [
+    "Cl.5.2",
+    "5.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.PO-02",
+   "text": "Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organizational mission",
+   "iso": [
+    "Cl.5.2",
+    "5.1",
+    "Cl.8.1",
+    "Cl.8.2",
+    "Cl.8.3",
+    "Cl.9.1",
+    "Cl.10.2",
+    "5.19"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OV-01",
+   "text": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction",
+   "iso": [
+    "Cl.9.1",
+    "5.1",
+    "5.19"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OV-02",
+   "text": "The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks",
+   "iso": [
+    "Cl.9.1",
+    "5.1",
+    "5.19"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.OV-03",
+   "text": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed",
+   "iso": [
+    "Cl.9.1",
+    "5.1",
+    "5.19",
+    "5.20",
+    "Cl.8.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.SC-01",
+   "text": "A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders",
+   "iso": [
+    "Cl.8.1",
+    "5.1",
+    "5.19",
+    "5.20",
+    "5.21",
+    "5.22"
+   ],
+   "cis": [
+    "15.2"
+   ]
+  },
+  {
+   "id": "GV.SC-02",
+   "text": "Cybersecurity roles and responsibilities for suppliers, customers, and partners are established, communicated, and coordinated internally and externally",
+   "iso": [
+    "Cl.5.3",
+    "5.2",
+    "5.4"
+   ],
+   "cis": [
+    "15.4"
+   ]
+  },
+  {
+   "id": "GV.SC-03",
+   "text": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes",
+   "iso": [
+    "Cl.8.1",
+    "5.1",
+    "5.19",
+    "5.20",
+    "5.21"
+   ],
+   "cis": []
+  },
+  {
+   "id": "GV.SC-04",
+   "text": "Suppliers are known and prioritized by criticality",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3",
+    "5.19",
+    "5.22"
+   ],
+   "cis": [
+    "15.1",
+    "15.3"
+   ]
+  },
+  {
+   "id": "GV.SC-05",
+   "text": "Requirements to address cybersecurity risks in supply chains are established, prioritized, and integrated into contracts and other types of agreements with suppliers and other relevant third parties",
+   "iso": [
+    "Cl.4.2",
+    "5.19",
+    "5.20",
+    "5.31"
+   ],
+   "cis": [
+    "15.4"
+   ]
+  },
+  {
+   "id": "GV.SC-06",
+   "text": "Planning and due diligence are performed to reduce risks before entering into formal supplier or other third-party relationships",
+   "iso": [
+    "Cl.4.2",
+    "5.19",
+    "5.20",
+    "5.31"
+   ],
+   "cis": [
+    "15.5"
+   ]
+  },
+  {
+   "id": "GV.SC-07",
+   "text": "The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3",
+    "5.19",
+    "5.20",
+    "5.31"
+   ],
+   "cis": [
+    "15.6"
+   ]
+  },
+  {
+   "id": "GV.SC-08",
+   "text": "Relevant suppliers and other third parties are included in incident planning, response, and recovery activities",
+   "iso": [
+    "5.26"
+   ],
+   "cis": [
+    "15.4"
+   ]
+  },
+  {
+   "id": "GV.SC-09",
+   "text": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "5.19",
+    "5.20",
+    "5.21",
+    "5.22"
+   ],
+   "cis": [
+    "15.6"
+   ]
+  },
+  {
+   "id": "GV.SC-10",
+   "text": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3",
+    "5.19",
+    "5.20",
+    "5.21",
+    "5.22",
+    "Cl.8.1",
+    "Cl.8.2",
+    "Cl.8.3",
+    "Cl.10.2",
+    "5.9",
+    "5.12",
+    "5.13"
+   ],
+   "cis": [
+    "15.7"
+   ]
+  },
+  {
+   "id": "ID.AM-01",
+   "text": "Inventories of hardware managed by the organization are maintained",
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "1.1"
+   ]
+  },
+  {
+   "id": "ID.AM-02",
+   "text": "Inventories of software, services, and systems managed by the organization are maintained",
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "2.1"
+   ]
+  },
+  {
+   "id": "ID.AM-03",
+   "text": "Representations of the organization's authorized network communication and internal and external network data flows are maintained",
+   "iso": [
+    "5.14",
+    "8.20",
+    "8.21",
+    "8.22"
+   ],
+   "cis": [
+    "3.8"
+   ]
+  },
+  {
+   "id": "ID.AM-04",
+   "text": "Inventories of services provided by suppliers are maintained",
+   "iso": [
+    "5.22"
+   ],
+   "cis": [
+    "15.1"
+   ]
+  },
+  {
+   "id": "ID.AM-05",
+   "text": "Assets are prioritized based on classification, criticality, resources, and impact on the mission",
+   "iso": [
+    "5.9",
+    "5.12",
+    "5.13"
+   ],
+   "cis": [
+    "3.7"
+   ]
+  },
+  {
+   "id": "ID.AM-07",
+   "text": "Inventories of data and corresponding metadata for designated data types are maintained",
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "3.2"
+   ]
+  },
+  {
+   "id": "ID.AM-08",
+   "text": "Systems, hardware, software, services, and data are managed throughout their life cycles",
+   "iso": [
+    "5.8",
+    "5.9",
+    "5.12",
+    "5.13",
+    "5.19",
+    "5.22",
+    "7.10",
+    "7.13",
+    "7.14",
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3"
+   ],
+   "cis": [
+    "1.1",
+    "3.5"
+   ]
+  },
+  {
+   "id": "ID.RA-01",
+   "text": "Vulnerabilities in assets are identified, validated, and recorded",
+   "iso": [
+    "8.8"
+   ],
+   "cis": [
+    "7.1"
+   ]
+  },
+  {
+   "id": "ID.RA-02",
+   "text": "Cyber threat intelligence is received from information sharing forums and sources",
+   "iso": [
+    "5.7",
+    "5.22",
+    "8.16"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-03",
+   "text": "Internal and external threats to the organization are identified and recorded",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3",
+    "5.7",
+    "5.22",
+    "8.16"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-04",
+   "text": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-05",
+   "text": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+   "iso": [
+    "Cl.6.1.1",
+    "Cl.6.1.2",
+    "Cl.6.1.3",
+    "5.7"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-06",
+   "text": "Risk responses are chosen, prioritized, planned, tracked, and communicated",
+   "iso": [
+    "Cl.6.13",
+    "5.7"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-07",
+   "text": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked",
+   "iso": [
+    "Cl.6.1.3",
+    "8.32"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-08",
+   "text": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established",
+   "iso": [
+    "Cl.6.1.2"
+   ],
+   "cis": [
+    "7.2"
+   ]
+  },
+  {
+   "id": "ID.RA-09",
+   "text": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+   "iso": [
+    "5.19",
+    "5.20",
+    "5.22"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.RA-10",
+   "text": "Critical suppliers are assessed prior to acquisition",
+   "iso": [
+    "5.19",
+    "5.20",
+    "5.22",
+    "Cl.10.1",
+    "Cl.10.2"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.IM-01",
+   "text": "Improvements are identified from evaluations",
+   "iso": [
+    "Cl.9.2",
+    "Cl.10.1",
+    "Cl.10.2",
+    "5.35"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.IM-02",
+   "text": "Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties",
+   "iso": [
+    "Cl.9.2",
+    "Cl.9.3",
+    "Cl.10.1",
+    "Cl.10.2",
+    "5.19",
+    "5.35"
+   ],
+   "cis": [
+    "17.7"
+   ]
+  },
+  {
+   "id": "ID.IM-03",
+   "text": "Improvements are identified from execution of operational processes, procedures, and activities",
+   "iso": [
+    "Cl.9.1",
+    "5.27"
+   ],
+   "cis": []
+  },
+  {
+   "id": "ID.IM-04",
+   "text": "Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved",
+   "iso": [
+    "Cl.9.1",
+    "5.24",
+    "5.26",
+    "5.27"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.AA-01",
+   "text": "Identities and credentials for authorized users, services, and hardware are managed by the organization",
+   "iso": [
+    "5.15",
+    "5.18",
+    "8.2",
+    "8.5"
+   ],
+   "cis": [
+    "5.1",
+    "5.6",
+    "6.7"
+   ]
+  },
+  {
+   "id": "PR.AA-02",
+   "text": "Identities are proofed and bound to credentials based on the context of interactions",
+   "iso": [
+    "8.2",
+    "8.3",
+    "8.5"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.AA-03",
+   "text": "Users, services, and hardware are authenticated",
+   "iso": [
+    "5.15",
+    "5.16",
+    "5.17",
+    "5.18",
+    "8.5"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.AA-04",
+   "text": "Identity assertions are protected, conveyed, and verified",
+   "iso": [
+    "5.16"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.AA-05",
+   "text": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties",
+   "iso": [
+    "5.1",
+    "5.3",
+    "5.14",
+    "5.15",
+    "5.16",
+    "5.17",
+    "5.18",
+    "8.2",
+    "8.3",
+    "8.5",
+    "8.18"
+   ],
+   "cis": [
+    "3.3",
+    "5.1",
+    "6.8"
+   ]
+  },
+  {
+   "id": "PR.AA-06",
+   "text": "Physical access to assets is managed, monitored, and enforced commensurate with risk",
+   "iso": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.12",
+    "Cl.7.3",
+    "6.3"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.AT-01",
+   "text": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind",
+   "iso": [
+    "Cl.7.3",
+    "6.3"
+   ],
+   "cis": [
+    "14.1"
+   ]
+  },
+  {
+   "id": "PR.AT-02",
+   "text": "Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind",
+   "iso": [
+    "Cl.7.3",
+    "5.2",
+    "6.3"
+   ],
+   "cis": [
+    "14.9"
+   ]
+  },
+  {
+   "id": "PR.DS-01",
+   "text": "The confidentiality, integrity, and availability of data-at-rest are protected",
+   "iso": [
+    "Cl.4.2",
+    "Cl.5.2",
+    "5.1",
+    "5.3",
+    "5.10",
+    "5.13",
+    "5.14",
+    "5.15",
+    "6.1",
+    "6.2",
+    "6.5",
+    "7.7",
+    "7.10",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.7",
+    "8.8",
+    "8.17",
+    "8.19",
+    "8.22",
+    "8.26"
+   ],
+   "cis": [
+    "3.11"
+   ]
+  },
+  {
+   "id": "PR.DS-02",
+   "text": "The confidentiality, integrity, and availability of data-in-transit are protected",
+   "iso": [
+    "Cl.4.2",
+    "Cl.5.2",
+    "5.3",
+    "5.10",
+    "5.13",
+    "5.14",
+    "5.15",
+    "6.1",
+    "6.2",
+    "6.5",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.17",
+    "8.20",
+    "8.22",
+    "8.26"
+   ],
+   "cis": [
+    "3.10"
+   ]
+  },
+  {
+   "id": "PR.DS-10",
+   "text": "The confidentiality, integrity, and availability of data-in-use are protected",
+   "iso": [
+    "Cl.4.2",
+    "Cl.5.2",
+    "5.3",
+    "5.10",
+    "5.13",
+    "5.14",
+    "5.15",
+    "6.1",
+    "6.2",
+    "6.5",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.17",
+    "8.22",
+    "8.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.DS-11",
+   "text": "Backups of data are created, protected, maintained, and tested",
+   "iso": [
+    "8.13",
+    "Cl.8.1",
+    "8.5",
+    "8.8",
+    "8.9",
+    "8.14"
+   ],
+   "cis": [
+    "11.2",
+    "11.3",
+    "11.5"
+   ]
+  },
+  {
+   "id": "PR.PS-01",
+   "text": "Configuration management practices are established and applied",
+   "iso": [
+    "Cl.9.3",
+    "8.9"
+   ],
+   "cis": [
+    "4.1",
+    "4.2"
+   ]
+  },
+  {
+   "id": "PR.PS-02",
+   "text": "Software is maintained, replaced, and removed commensurate with risk",
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "2.2",
+    "2.3"
+   ]
+  },
+  {
+   "id": "PR.PS-03",
+   "text": "Hardware is maintained, replaced, and removed commensurate with risk",
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "1.2"
+   ]
+  },
+  {
+   "id": "PR.PS-04",
+   "text": "Log records are generated and made available for continuous monitoring",
+   "iso": [
+    "8.15",
+    "8.17"
+   ],
+   "cis": [
+    "8.2"
+   ]
+  },
+  {
+   "id": "PR.PS-05",
+   "text": "Installation and execution of unauthorized software are prevented",
+   "iso": [
+    "8.19"
+   ],
+   "cis": [
+    "2.5"
+   ]
+  },
+  {
+   "id": "PR.PS-06",
+   "text": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+   "iso": [
+    "8.25",
+    "8.28",
+    "6.6",
+    "8.27"
+   ],
+   "cis": [
+    "16.1"
+   ]
+  },
+  {
+   "id": "PR.IR-01",
+   "text": "Networks and environments are protected from unauthorized logical access and usage",
+   "iso": [
+    "8.20",
+    "8.21",
+    "8.22"
+   ],
+   "cis": [
+    "3.12",
+    "12.2"
+   ]
+  },
+  {
+   "id": "PR.IR-02",
+   "text": "The organization's technology assets are protected from environmental threats",
+   "iso": [
+    "7.5"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.IR-03",
+   "text": "Mechanisms are implemented to achieve resilience requirements in normal and adverse situations",
+   "iso": [
+    "Cl.4.2",
+    "Cl.6.1.1",
+    "5.29",
+    "8.14"
+   ],
+   "cis": []
+  },
+  {
+   "id": "PR.IR-04",
+   "text": "Adequate resource capacity to ensure availability is maintained",
+   "iso": [
+    "8.6"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.CM-01",
+   "text": "Networks and network services are monitored to find potentially adverse events",
+   "iso": [
+    "8.16"
+   ],
+   "cis": [
+    "13.1"
+   ]
+  },
+  {
+   "id": "DE.CM-02",
+   "text": "The physical environment is monitored to find potentially adverse events",
+   "iso": [
+    "7.4"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.CM-03",
+   "text": "Personnel activity and technology usage are monitored to find potentially adverse events",
+   "iso": [
+    "Cl.9.1",
+    "7.4",
+    "8.16"
+   ],
+   "cis": [
+    "10.7"
+   ]
+  },
+  {
+   "id": "DE.CM-06",
+   "text": "External service provider activities and services are monitored to find potentially adverse events",
+   "iso": [
+    "5.22",
+    "8.16"
+   ],
+   "cis": [
+    "15.2",
+    "15.6"
+   ]
+  },
+  {
+   "id": "DE.CM-09",
+   "text": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+   "iso": [
+    "8.16",
+    "5.26"
+   ],
+   "cis": [
+    "10.1"
+   ]
+  },
+  {
+   "id": "DE.AE-02",
+   "text": "Potentially adverse events are analyzed to better understand associated activities",
+   "iso": [
+    "5.24",
+    "5.25"
+   ],
+   "cis": [
+    "8.11"
+   ]
+  },
+  {
+   "id": "DE.AE-03",
+   "text": "Information is correlated from multiple sources",
+   "iso": [
+    "8.15",
+    "8.16"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.AE-04",
+   "text": "The estimated impact and scope of adverse events are understood",
+   "iso": [
+    "5.25"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.AE-06",
+   "text": "Information on adverse events is provided to authorized staff and tools",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.AE-07",
+   "text": "Cyber threat intelligence and other contextual information are integrated into the analysis",
+   "iso": [
+    "5.7"
+   ],
+   "cis": []
+  },
+  {
+   "id": "DE.AE-08",
+   "text": "Incidents are declared when adverse events meet the defined incident criteria",
+   "iso": [
+    "5.25",
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.MA-01",
+   "text": "The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+   "iso": [
+    "5.26",
+    "5.27",
+    "5.28"
+   ],
+   "cis": [
+    "17.4"
+   ]
+  },
+  {
+   "id": "RS.MA-02",
+   "text": "Incident reports are triaged and validated",
+   "iso": [
+    "5.24",
+    "5.26",
+    "5.27",
+    "5.28",
+    "6.8"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.MA-03",
+   "text": "Incidents are categorized and prioritized",
+   "iso": [
+    "5.25"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.MA-04",
+   "text": "Incidents are escalated or elevated as needed",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.MA-05",
+   "text": "The criteria for initiating incident recovery are applied",
+   "iso": [
+    "5.25",
+    "5.26",
+    "5.28"
+   ],
+   "cis": [
+    "17.9"
+   ]
+  },
+  {
+   "id": "RS.AN-03",
+   "text": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+   "iso": [
+    "5.25",
+    "5.27"
+   ],
+   "cis": [
+    "17.8"
+   ]
+  },
+  {
+   "id": "RS.AN-06",
+   "text": "Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved",
+   "iso": [
+    "5.28"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.AN-07",
+   "text": "Incident data and metadata are collected, and their integrity and provenance are preserved",
+   "iso": [
+    "5.28"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.AN-08",
+   "text": "An incident's magnitude is estimated and validated",
+   "iso": [
+    "5.25",
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.CO-02",
+   "text": "Internal and external stakeholders are notified of incidents",
+   "iso": [
+    "Cl.7.4",
+    "5.26"
+   ],
+   "cis": [
+    "17.2"
+   ]
+  },
+  {
+   "id": "RS.CO-03",
+   "text": "Information is shared with designated internal and external stakeholders",
+   "iso": [
+    "Cl.7.4",
+    "5.26"
+   ],
+   "cis": [
+    "17.2"
+   ]
+  },
+  {
+   "id": "RS.MI-01",
+   "text": "Incidents are contained",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RS.MI-02",
+   "text": "Incidents are eradicated",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.RP-01",
+   "text": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.RP-02",
+   "text": "Recovery actions are selected, scoped, prioritized, and performed",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.RP-03",
+   "text": "The integrity of backups and other restoration assets is verified before using them for restoration",
+   "iso": [
+    "8.13"
+   ],
+   "cis": [
+    "11.5"
+   ]
+  },
+  {
+   "id": "RC.RP-04",
+   "text": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+   "iso": [
+    "Cl.8.1"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.RP-05",
+   "text": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+   "iso": [
+    "5.26"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.RP-06",
+   "text": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed",
+   "iso": [
+    "5.27",
+    "8.13",
+    "Cl.8.1",
+    "5.28"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.CO-03",
+   "text": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders",
+   "iso": [
+    "Cl.7.4",
+    "5.28"
+   ],
+   "cis": []
+  },
+  {
+   "id": "RC.CO-04",
+   "text": "Public updates on incident recovery are shared using approved methods and messaging",
+   "iso": [
+    "Cl.7.4"
+   ],
+   "cis": [
+    "17.2",
+    "17.6"
+   ]
+  }
+ ]
+}

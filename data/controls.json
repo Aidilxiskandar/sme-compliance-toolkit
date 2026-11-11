@@ -1,0 +1,587 @@
+{
+ "about": "SME Compliance Toolkit control set. Control wording is original. ISO/IEC 27001:2022 and CIS Controls v8.1 are cited by number only.",
+ "controls": [
+  {
+   "id": "GV-1",
+   "fn": "Govern",
+   "title": "Name an owner for security and data protection",
+   "what": "One named person (often the owner) is responsible for security and personal data, with a backup person. If the DPO test in the PDPA is met, appoint and register a DPO.",
+   "csf": [
+    "GV.RR-02"
+   ],
+   "iso": [
+    "5.2"
+   ],
+   "cis": [
+    "17.1"
+   ],
+   "pdpa": "DPO duty (s12A) if thresholds are met"
+  },
+  {
+   "id": "GV-2",
+   "fn": "Govern",
+   "title": "Know your legal duties",
+   "what": "Check once a year: do you need to register with JPDP, do you need a DPO, what you must do after a breach, and what your customer or platform contracts require. Write the answers down.",
+   "csf": [
+    "GV.OC-03"
+   ],
+   "iso": [
+    "5.31",
+    "5.34"
+   ],
+   "cis": [],
+   "pdpa": "Registration (s15/16), DPO (s12A), breach notification (s12B)"
+  },
+  {
+   "id": "GV-3",
+   "fn": "Govern",
+   "title": "Keep a short set of written rules",
+   "what": "A few plain-language policies (acceptable use, passwords and MFA, backups, access, data protection, clear desk) that every staff member has read and signed.",
+   "csf": [
+    "GV.PO-01"
+   ],
+   "iso": [
+    "5.1",
+    "5.10"
+   ],
+   "cis": [],
+   "pdpa": "Supports the Security Principle"
+  },
+  {
+   "id": "GV-4",
+   "fn": "Govern",
+   "title": "Keep a risk register",
+   "what": "List the main things that could go wrong, rate likelihood and impact, decide what to do about each, and review at least once a year or after any incident.",
+   "csf": [
+    "GV.RM-03",
+    "ID.RA-05",
+    "ID.RA-06"
+   ],
+   "iso": [
+    "Cl.6.1.2",
+    "Cl.6.1.3"
+   ],
+   "cis": [],
+   "pdpa": "Shows the 'practical steps' the Security Principle expects"
+  },
+  {
+   "id": "GV-5",
+   "fn": "Govern",
+   "title": "Check suppliers and put data terms in contracts",
+   "what": "List the vendors, freelancers and platforms that touch your data. Anyone processing personal data for you must have written terms: protect the data, tell you promptly about a breach, return or delete it at the end.",
+   "csf": [
+    "GV.SC-04",
+    "GV.SC-05",
+    "GV.SC-06"
+   ],
+   "iso": [
+    "5.19",
+    "5.20"
+   ],
+   "cis": [
+    "15.1"
+   ],
+   "pdpa": "Processors bound by Security Principle; DBN Guideline para 12.2 contract clause"
+  },
+  {
+   "id": "ID-1",
+   "fn": "Identify",
+   "title": "List your devices and software",
+   "what": "Every laptop, PC, tablet, phone, router, POS, NAS, DVR and printer used for the business, with the software on it, who uses it and whether it is still supported.",
+   "csf": [
+    "ID.AM-01",
+    "ID.AM-02"
+   ],
+   "iso": [
+    "5.9"
+   ],
+   "cis": [
+    "1.1",
+    "1.2",
+    "2.1",
+    "2.3"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "ID-2",
+   "fn": "Identify",
+   "title": "List the personal data you hold",
+   "what": "For each set of personal data: whose it is, roughly how many people, whether any of it is sensitive, why you collect it, where it is stored, who can see it and how long you keep it.",
+   "csf": [
+    "ID.AM-07"
+   ],
+   "iso": [
+    "5.9",
+    "5.12",
+    "5.34"
+   ],
+   "cis": [
+    "3.1",
+    "3.2"
+   ],
+   "pdpa": "Feeds the DPO test (20,000 / 10,000 / monitoring) and the breach tests (1,000 / significant harm)"
+  },
+  {
+   "id": "ID-3",
+   "fn": "Identify",
+   "title": "List your online accounts and services",
+   "what": "Email, cloud storage, social media, ad accounts, marketplaces, delivery apps, banking and government portals, each with its owner, who has access and whether MFA is on. Business accounts belong to the business, not a personal email.",
+   "csf": [
+    "ID.AM-04"
+   ],
+   "iso": [
+    "5.9",
+    "5.22",
+    "5.23"
+   ],
+   "cis": [
+    "15.1"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "ID-4",
+   "fn": "Identify",
+   "title": "Look for known weaknesses",
+   "what": "At least twice a year, check for default passwords, unsupported systems, missing updates and anything reachable from the internet that shouldn't be (NAS, DVR, router admin).",
+   "csf": [
+    "ID.RA-01"
+   ],
+   "iso": [
+    "8.8"
+   ],
+   "cis": [
+    "2.2",
+    "7.1",
+    "7.2"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-1",
+   "fn": "Protect",
+   "title": "One login per person, no sharing",
+   "what": "Every person has their own account on each system. Shared logins are replaced, or where a platform forces sharing, the password is kept in a password manager and changed when anyone leaves.",
+   "csf": [
+    "PR.AA-01"
+   ],
+   "iso": [
+    "5.16"
+   ],
+   "cis": [
+    "5.1"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-2",
+   "fn": "Protect",
+   "title": "Turn on MFA",
+   "what": "Two-step login on email, banking, cloud storage, social media and ad accounts, marketplaces, remote access and every admin account. Email and banking first.",
+   "csf": [
+    "PR.AA-03"
+   ],
+   "iso": [
+    "8.5"
+   ],
+   "cis": [
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-3",
+   "fn": "Protect",
+   "title": "Strong unique passwords and no defaults",
+   "what": "Use a password manager. Change every default password (router, DVR, NAS, POS admin). No passwords on sticky notes or in spreadsheets.",
+   "csf": [
+    "PR.AA-01",
+    "PR.AA-03"
+   ],
+   "iso": [
+    "5.17"
+   ],
+   "cis": [
+    "4.7",
+    "5.2"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-4",
+   "fn": "Protect",
+   "title": "Give only the access people need",
+   "what": "Staff, interns and freelancers only see the data and systems their job needs. Admin rights are used from a separate account only when needed.",
+   "csf": [
+    "PR.AA-05"
+   ],
+   "iso": [
+    "5.15",
+    "5.18",
+    "8.2"
+   ],
+   "cis": [
+    "3.3",
+    "5.4"
+   ],
+   "pdpa": "Security Principle"
+  },
+  {
+   "id": "PR-5",
+   "fn": "Protect",
+   "title": "Joiners and leavers",
+   "what": "A simple checklist for giving access when someone starts and removing all of it on their last day, including freelancers and former vendors. Review accounts every 3 months and disable unused ones.",
+   "csf": [
+    "PR.AA-01",
+    "PR.AA-05"
+   ],
+   "iso": [
+    "5.18",
+    "6.5"
+   ],
+   "cis": [
+    "5.3",
+    "6.1",
+    "6.2"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-6",
+   "fn": "Protect",
+   "title": "Train staff",
+   "what": "A short session at hiring and every year: spotting phishing and scam calls, handling personal data, using MFA, why updates matter, risky public Wi-Fi, and how to report something suspicious.",
+   "csf": [
+    "PR.AT-01",
+    "PR.AT-02"
+   ],
+   "iso": [
+    "6.3"
+   ],
+   "cis": [
+    "14.1",
+    "14.2",
+    "14.3",
+    "14.4",
+    "14.5",
+    "14.6",
+    "14.7",
+    "14.8"
+   ],
+   "pdpa": "DBN Guideline para 11.4 expects periodic training"
+  },
+  {
+   "id": "PR-7",
+   "fn": "Protect",
+   "title": "Keep everything updated",
+   "what": "Automatic updates on all devices, apps, routers and the NAS. Replace systems that no longer get security updates.",
+   "csf": [
+    "PR.PS-02",
+    "ID.RA-01"
+   ],
+   "iso": [
+    "8.8"
+   ],
+   "cis": [
+    "7.3",
+    "7.4",
+    "12.1"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-8",
+   "fn": "Protect",
+   "title": "Set devices up securely",
+   "what": "Screen lock after a few minutes, firewall on, disk encryption on laptops and phones, browser and email apps kept current, and USB autorun off.",
+   "csf": [
+    "PR.PS-01",
+    "PR.DS-01"
+   ],
+   "iso": [
+    "8.1",
+    "8.9",
+    "8.24"
+   ],
+   "cis": [
+    "3.6",
+    "4.1",
+    "4.3",
+    "4.4",
+    "4.5",
+    "4.6",
+    "9.1"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-9",
+   "fn": "Protect",
+   "title": "Separate and close off the network",
+   "what": "Customer Wi-Fi is separate from business devices (POS, PCs, CCTV, NAS). Router admin is not reachable from the internet, and no ports are opened for the NAS or DVR. Use a remote-access method with MFA instead.",
+   "csf": [
+    "PR.IR-01"
+   ],
+   "iso": [
+    "8.20",
+    "8.22"
+   ],
+   "cis": [
+    "4.2"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-10",
+   "fn": "Protect",
+   "title": "Back up and test restores",
+   "what": "Automatic backups of important data, with at least one copy kept offline or separate so ransomware can't reach it. Test a restore every 3 months.",
+   "csf": [
+    "PR.DS-11"
+   ],
+   "iso": [
+    "8.13"
+   ],
+   "cis": [
+    "11.1",
+    "11.2",
+    "11.3",
+    "11.4"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "PR-11",
+   "fn": "Protect",
+   "title": "Collect less, keep it shorter, dispose of it safely",
+   "what": "Only collect personal data you actually need. Set how long each type is kept, then delete it or shred it. Wipe old devices before selling or throwing them away.",
+   "csf": [
+    "ID.AM-08",
+    "PR.DS-01"
+   ],
+   "iso": [
+    "5.33",
+    "7.10",
+    "7.14",
+    "8.10"
+   ],
+   "cis": [
+    "3.4",
+    "3.5"
+   ],
+   "pdpa": "Retention Principle; General Principle (data not excessive)"
+  },
+  {
+   "id": "PR-12",
+   "fn": "Protect",
+   "title": "Share data safely",
+   "what": "No 'anyone with the link' shares for personal data, and no sending IC copies or health data through personal chat apps. Use business accounts and restricted sharing.",
+   "csf": [
+    "PR.DS-02"
+   ],
+   "iso": [
+    "5.14"
+   ],
+   "cis": [
+    "3.3"
+   ],
+   "pdpa": "Security and Disclosure Principles"
+  },
+  {
+   "id": "PR-13",
+   "fn": "Protect",
+   "title": "Tell people and get consent",
+   "what": "A privacy notice in Malay and English for customers, staff and (where relevant) parents. Opt-in for marketing messages. Explicit consent for sensitive data. A parent's consent for children. CCTV signs at the entrance.",
+   "csf": [
+    "GV.OC-03"
+   ],
+   "iso": [
+    "5.34"
+   ],
+   "cis": [],
+   "pdpa": "General and Notice and Choice Principles; Access Principle requests"
+  },
+  {
+   "id": "PR-14",
+   "fn": "Protect",
+   "title": "Lock things up",
+   "what": "Servers, NAS and DVRs are in a locked space. Clear desk and clear screen when away. Visitors can't see screens holding personal data.",
+   "csf": [
+    "PR.AA-06"
+   ],
+   "iso": [
+    "7.1",
+    "7.2",
+    "7.4",
+    "7.7"
+   ],
+   "cis": [],
+   "pdpa": "Security Principle"
+  },
+  {
+   "id": "DE-1",
+   "fn": "Detect",
+   "title": "Anti-malware on every device",
+   "what": "Built-in or paid anti-malware on every business PC and laptop, updating automatically, with alerts going to the owner.",
+   "csf": [
+    "DE.CM-09"
+   ],
+   "iso": [
+    "8.7"
+   ],
+   "cis": [
+    "10.1",
+    "10.2",
+    "10.3"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "DE-2",
+   "fn": "Detect",
+   "title": "Turn on login alerts and keep logs",
+   "what": "Turn on new-sign-in and security alerts for email, banking, social and cloud accounts, and keep the logs the services already provide. Someone actually reads the alerts.",
+   "csf": [
+    "DE.CM-03",
+    "DE.CM-09"
+   ],
+   "iso": [
+    "8.15",
+    "8.16"
+   ],
+   "cis": [
+    "8.1",
+    "8.2",
+    "8.3"
+   ],
+   "pdpa": "Helps prove when a breach was discovered (72-hour clock)"
+  },
+  {
+   "id": "DE-3",
+   "fn": "Detect",
+   "title": "Block known bad websites",
+   "what": "Use a filtering DNS service on the router or devices to block known malicious and phishing sites.",
+   "csf": [
+    "DE.CM-01"
+   ],
+   "iso": [
+    "8.23"
+   ],
+   "cis": [
+    "9.2"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "DE-4",
+   "fn": "Detect",
+   "title": "Staff know the warning signs and report them",
+   "what": "Everyone knows the signs (strange pop-ups, locked files, unexpected password resets, customers reporting scam messages in your name) and who to tell straight away.",
+   "csf": [
+    "DE.AE-02",
+    "RS.MA-01"
+   ],
+   "iso": [
+    "5.25",
+    "6.8"
+   ],
+   "cis": [
+    "14.6",
+    "17.3"
+   ],
+   "pdpa": "The 72-hour clock starts when the business is informed"
+  },
+  {
+   "id": "RS-1",
+   "fn": "Respond",
+   "title": "A one-page incident and breach plan",
+   "what": "Who is in charge, who to call (IT help, bank, platform support, police, JPDP, CyberSecurity Malaysia's Cyber999), the first containment steps, and how to decide whether to notify.",
+   "csf": [
+    "RS.MA-01"
+   ],
+   "iso": [
+    "5.24",
+    "5.26"
+   ],
+   "cis": [
+    "17.1",
+    "17.2",
+    "17.3"
+   ],
+   "pdpa": "DBN Guideline para 11: a breach response plan is required"
+  },
+  {
+   "id": "RS-2",
+   "fn": "Respond",
+   "title": "Assess and notify on time",
+   "what": "For every incident, decide whether personal data was affected, whether it is significant harm or more than 1,000 people, then notify JPDP within 72 hours and the affected people within 7 days if required.",
+   "csf": [
+    "RS.AN-03",
+    "RS.CO-02",
+    "RS.CO-03"
+   ],
+   "iso": [
+    "5.25",
+    "5.26"
+   ],
+   "cis": [
+    "17.2"
+   ],
+   "pdpa": "s12B, DBN Guideline paras 5 to 9"
+  },
+  {
+   "id": "RS-3",
+   "fn": "Respond",
+   "title": "Keep a breach register",
+   "what": "Record every breach, even those not notified: when it was found, cause, data and people affected, timeline, actions taken, and notifications made or why not. Keep it at least 2 years.",
+   "csf": [
+    "RS.MA-02",
+    "RS.AN-06"
+   ],
+   "iso": [
+    "5.27",
+    "5.28"
+   ],
+   "cis": [],
+   "pdpa": "DBN Guideline para 14"
+  },
+  {
+   "id": "RC-1",
+   "fn": "Recover",
+   "title": "Restore and check",
+   "what": "Restore systems and data from a known-good backup, check it is complete and clean before going back to normal, and tell staff and customers what they need to know.",
+   "csf": [
+    "RC.RP-01",
+    "RC.RP-03",
+    "RC.CO-03"
+   ],
+   "iso": [
+    "5.29",
+    "5.30",
+    "8.13"
+   ],
+   "cis": [
+    "11.1"
+   ],
+   "pdpa": ""
+  },
+  {
+   "id": "RC-2",
+   "fn": "Recover",
+   "title": "Learn and improve",
+   "what": "After any incident or near miss, hold a short review: what happened, what worked, what to change. Update the risk register and policies.",
+   "csf": [
+    "ID.IM-03",
+    "RC.RP-06"
+   ],
+   "iso": [
+    "5.27"
+   ],
+   "cis": [],
+   "pdpa": "DBN Guideline para 11.3.6 post-incident review"
+  }
+ ]
+}

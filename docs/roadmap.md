@@ -10,7 +10,7 @@ Pace: about 4 to 5 hours a week.
 ## Phase 1: Research and inventory (Nov to Dec 2026)
 - [x] Read the NIST CSF 2.0 Small Business Quick-Start Guide ([notes](csf-small-business-notes.md))
 - [x] Summarise PDPA 2010 + 2024 amendments from official sources ([pdpa-summary.md](pdpa-summary.md)); 5 open points flagged
-- [ ] Framework mapping: CSF 2.0 ↔ ISO 27001:2022 Annex A ↔ CIS v8.1 IG1 (`docs/framework-mapping.md`)
+- [x] Framework mapping: 32 toolkit controls ↔ CSF 2.0 ↔ ISO 27001:2022 ↔ CIS v8.1 IG1 (all 56 IG1 safeguards covered), checked against NIST's official mappings ([framework-mapping.md](framework-mapping.md))
 - [ ] Template 1: asset and personal-data inventory
 - [ ] Template 2: risk register
 - [ ] Fill both in for the five case-study businesses
