@@ -9,7 +9,7 @@ ES modules need to be served over http (opening `index.html` as a file won't wor
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Then open http://127.0.0.1:8000/app/. Example links: `#/example/01` to `#/example/05` load the five fictional businesses.
+Then open http://127.0.0.1:8000/ (it forwards to `/app/`). Keep `--bind 127.0.0.1`: without it the server listens on every network interface, so anyone on the same Wi-Fi could browse the whole folder, including `.git`. Example links: `#/example/01` to `#/example/05` load the five fictional businesses.
 
 ## Tests
 ```sh
