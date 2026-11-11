@@ -34,6 +34,6 @@ Pace: about 4 to 5 hours a week.
 - [x] Case study write-up comparing the five businesses ([case-study.md](case-study.md))
 - [ ] Optional Bahasa Malaysia version
 - [x] Licence: MIT
-- [ ] Full-history leak scan, make the repo public, publish the app on GitHub Pages
+- [x] Full-history leak scan (clean), commit emails moved to GitHub noreply, repo made public, app live on [GitHub Pages](https://aidilxiskandar.github.io/sme-compliance-toolkit/) (11 Nov 2026)
 - [ ] LinkedIn post (later)
 - [ ] Trial with 1 to 2 other small businesses
