@@ -32,7 +32,7 @@ body { margin: 0; font: 14.5px/1.6 var(--font-body); background: var(--bg); colo
 .shell { display: grid; grid-template-columns: var(--side-w) 1fr; min-height: 100vh; }
 .side { background: var(--navy); color: var(--side-text); border-right: var(--outline); padding: 20px 14px; position: sticky; top: 0; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; gap: 18px; }
 .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-family: var(--font-display); font-size: 15px; text-transform: uppercase; letter-spacing: .01em; line-height: 1.2; padding: 0 8px; }
-.brand-mark { width: 34px; height: 34px; border-radius: 10px; background: var(--accent); border: 2px solid #fff; box-shadow: 3px 3px 0 #000; display: grid; place-items: center; font-size: 14px; color: #fff; flex: 0 0 auto; }
+.brand-mark { width: 40px; height: 40px; flex: 0 0 auto; }
 .brand small { font-family: var(--font-body); text-transform: none; letter-spacing: 0; }
 .brand small { display: block; font-weight: 500; font-size: 12px; color: var(--side-muted); }
 .side nav { display: flex; flex-direction: column; gap: 20px; }

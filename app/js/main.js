@@ -116,7 +116,7 @@ async function drawBar() {
 
   const route = currentRoute()[0] || 'dashboard';
   side.append(...[
-    h('a', { class: 'brand', href: '#/' }, h('span', { class: 'brand-mark', 'aria-hidden': 'true' }, 'SK'),
+    h('a', { class: 'brand', href: '#/' }, h('img', { class: 'brand-mark', src: 'logo-on-dark.svg', alt: '', width: '40', height: '40' }),
       h('span', {}, 'SME Security Kit', h('small', {}, 'Security & PDPA'))),
     biz ? h('nav', { 'aria-label': 'Sections' }, NAV.map(([group, items]) => h('div', { class: 'nav-group' },
       h('div', { class: 'nav-label' }, group),

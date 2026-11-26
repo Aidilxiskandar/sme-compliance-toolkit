@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="SME Security Kit">
+  <path d="M40 48 V36 a20 20 0 0 1 40 0 V48" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+  <rect x="24" y="58" width="84" height="56" rx="10" fill="#000000"/>
+  <rect x="18" y="52" width="84" height="56" rx="10" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4"/>
+  <rect x="14" y="44" width="23" height="18" fill="#2F5BEA"/><rect x="37" y="44" width="23" height="18" fill="#FFFFFF"/>
+  <rect x="60" y="44" width="23" height="18" fill="#2F5BEA"/><rect x="83" y="44" width="23" height="18" fill="#FFFFFF"/>
+  <path d="M14 62 a11.5 11.5 0 0 0 23 0 Z" fill="#2F5BEA"/><path d="M37 62 a11.5 11.5 0 0 0 23 0 Z" fill="#FFFFFF"/>
+  <path d="M60 62 a11.5 11.5 0 0 0 23 0 Z" fill="#2F5BEA"/><path d="M83 62 a11.5 11.5 0 0 0 23 0 Z" fill="#FFFFFF"/>
+  <path d="M14 44 H106 V62 a11.5 11.5 0 0 1 -23 0 a11.5 11.5 0 0 1 -23 0 a11.5 11.5 0 0 1 -23 0 a11.5 11.5 0 0 1 -23 0 Z" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="60" cy="86" r="7" fill="#14213D"/><rect x="56.5" y="88" width="7" height="13" rx="2" fill="#14213D"/>
+</svg>

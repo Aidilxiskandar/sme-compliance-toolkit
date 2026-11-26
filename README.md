@@ -1,3 +1,5 @@
+<p align="center"><img src="app/logo.svg" alt="SME Security Kit logo: a padlock shaped like a small shop" width="120"></p>
+
 # SME Compliance Toolkit
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
