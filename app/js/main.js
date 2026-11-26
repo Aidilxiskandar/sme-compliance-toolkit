@@ -39,7 +39,6 @@ let controls = [];
 let checklistItems = [];
 let bank = { levels: [], questions: [] };
 const main = document.getElementById('main');
-const bar = document.getElementById('bar');
 const side = document.getElementById('side');
 const note = document.getElementById('note');
 
@@ -53,7 +52,7 @@ function framed() {
 async function init() {
   if (framed()) {
     clear(main);
-    clear(bar);
+    clear(side);
     main.append(h('section', { class: 'card' },
       h('h2', {}, 'This app can\'t be shown inside another website'),
       h('p', {}, 'To protect your data, the SME Security Kit only works when opened directly.'),
@@ -97,7 +96,6 @@ async function select(id) {
 }
 
 async function drawBar() {
-  clear(bar);
   clear(side);
   const all = await store.list();
   const picker = h('select', { 'aria-label': 'Business', onchange: (e) => select(e.target.value) },
@@ -105,10 +103,8 @@ async function drawBar() {
     all.map((b) => h('option', { value: b.id, selected: biz && b.id === biz.id }, b.profile.name)));
   // Element.append() would turn null placeholders into the text "null",
   // so only append the parts that exist.
-  bar.append(...[
-    picker,
-    h('span', { class: 'spacer' }),
-    h('button', { type: 'button', onclick: addBusiness }, 'New business'),
+  const files = h('div', { class: 'bar-actions' }, ...[
+    h('button', { type: 'button', onclick: addBusiness }, 'New'),
     h('label', { class: 'button' }, 'Open file', h('input', { type: 'file', accept: 'application/json,.json', class: 'sr-only', onchange: importFile })),
     biz ? h('button', { type: 'button', title: 'The file contains this business\'s security weaknesses and personal data details. Keep it somewhere private.', onclick: saveFile }, 'Save file') : null,
     biz ? h('button', { type: 'button', class: 'danger', onclick: removeBusiness }, 'Delete') : null,
@@ -118,6 +114,7 @@ async function drawBar() {
   side.append(...[
     h('a', { class: 'brand', href: '#/' }, h('img', { class: 'brand-mark', src: 'logo.svg', alt: '', width: '40', height: '40' }),
       h('span', {}, 'SME Security Kit', h('small', {}, 'Security & PDPA'))),
+    h('div', { id: 'bar', class: 'bar' }, h('label', { class: 'bar-label' }, 'Business', picker), files),
     biz ? h('nav', { 'aria-label': 'Sections' }, NAV.map(([group, items]) => h('div', { class: 'nav-group' },
       h('div', { class: 'nav-label' }, group),
       items.map(([k, label]) => h('a', { href: `#/${k}`, class: route === k ? 'active' : '', 'aria-current': route === k ? 'page' : null }, label))))) : null,
