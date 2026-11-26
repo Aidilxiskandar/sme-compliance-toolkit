@@ -1,26 +1,28 @@
-# Design system ("Groovy")
+# Design system ("Trust navy")
 
-Shared visual language across Aidil's projects, adapted from the Groovy Grounds
-cafe website for data-dense tools. The tokens live at the top of
+Shared visual language for Aidil's projects: the clean, credible look of
+established compliance tools (navy sidebar, white cards, one blue accent,
+calm status colours). Tokens live at the top of
 [`app/styles.css`](../app/styles.css); copy that block to reuse them.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--cream` | `#E2D6BE` | page background |
-| `--paper` / `--cream-soft` | `#F7F1E6` / `#EEE6D6` | cards, inputs |
-| `--brown` | `#4A2C1D` | text, outlines, shadows (8.7:1 on cream) |
-| `--muted` | `#6B4A38` | secondary text (5.5:1) |
-| `--green` / `--green-deep` | `#356849` / `#24493a` | header band, primary buttons / links (7.0:1) |
-| `--red` / `--red-text` | `#C9343A` / `#A42A2F` | danger fills with white text / danger text (4.95:1) |
-| `--yellow` | `#EED86B` | active tab, badges, focus ring (fills only) |
+| `--navy` | `#14213D` | sidebar, headings and body text (16:1 on white) |
+| `--bg` / `--surface` / `--surface-2` | `#F7F8FA` / `#FFFFFF` / `#F1F3F7` | page / cards / table headers, tracks |
+| `--muted` | `#5A6478` | secondary text (5.9:1) |
+| `--accent` | `#2F5BEA` | buttons, links, active nav (5.5:1, white text 5.5:1) |
+| `--ok-fill` / `--ok` | `#0F8A6A` / `#0B6B53` | compliant: fills / text (5.7:1 on its tint) |
+| `--warn-fill` / `--warn` | `#B7791F` / `#8A5A0B` | partly: fills / text (5.9:1) |
+| `--gap-fill` / `--bad` | `#C2410C` / `#A8370A` | gap or risk: fills / text (5.6:1) |
 
-- **Type:** Sigmar One for headings and big numbers (uppercase); Space Mono for
-  everything else. Both are SIL OFL and self-hosted in `app/fonts/` (no
-  third-party requests).
-- **Shape:** 3px brown outline (2px on small controls), 14px radius, hard offset
-  shadow `6px 6px 0` (`3px` on small elements). Buttons are pills that lift on
-  hover and press flat on click.
-- **Accessibility:** every text colour meets WCAG AA (4.5:1) on its background;
-  the cafe's `#C9343A` red is used only as a fill, never as small text. Focus is
-  a yellow ring with a brown halo; motion respects `prefers-reduced-motion`.
-- **Brand boundary:** borrow the style, not the cafe's logo or mascot.
+- **Type:** Inter (variable, self-hosted in `app/fonts/`, SIL OFL), tabular
+  numbers in tables and metrics. No third-party font requests.
+- **Layout:** left sidebar grouped as Overview / Inventory / Risk & controls /
+  PDPA (the pattern Vanta and Drata use); a top bar for the current business and
+  file actions; a dashboard led by a readiness ring, progress per area and a
+  short "next steps" list. On screens under 900px the sidebar becomes a
+  swipeable strip.
+- **Shape:** 1px borders, 12px card radius, soft shadows, status pills with a dot.
+- **Rules:** fill colours (bars, rings, dots) may be bright; text always uses
+  the deeper variant so it meets WCAG AA (4.5:1). Values for rings and bars are
+  set through the CSSOM, never inline `style=""` (the CSP forbids it).

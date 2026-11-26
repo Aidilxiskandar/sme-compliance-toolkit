@@ -35,13 +35,12 @@ export function renderDashboard(root, biz, checklistItems = [], controls = []) {
       ),
       h('div', { class: 'actions no-print' }, h('button', { type: 'button', onclick: () => window.print() }, 'Print report')),
     ),
+    overview(biz, { secScore, lastVerified, checklistPct: checklistScore(checklistItems, biz).percent, open, serious }),
     h('div', { class: 'stats' },
       stat(biz.assets.length, 'devices', '#/assets'),
       stat(biz.accounts.length, 'online accounts', '#/accounts'),
       stat(people, 'people whose data is held (data sets may overlap)', '#/data'),
       stat(serious, 'high or critical open risks', '#/risks', serious > 0),
-      stat(secScore === null ? '–' : `${secScore}%`, lastVerified ? `verified security score (${lastVerified.name})` : 'no verified assessment yet', '#/assessment'),
-      stat(`${checklistScore(checklistItems, biz).percent}%`, 'of the PDPA checklist in place', '#/checklist'),
       stat(biz.breaches.filter((b) => b.status === 'open').length, 'open breaches in the register', '#/breaches', biz.breaches.some((b) => b.status === 'open')),
     ),
 
@@ -80,6 +79,70 @@ export function renderDashboard(root, biz, checklistItems = [], controls = []) {
       h('div', { class: 'risk-layout' }, heatmap(open), topTable(open)),
     ),
   );
+}
+
+// Readiness overview, in the pattern compliance tools use: one ring for overall
+// readiness, a bar per area, and a short list of what to do next.
+function overview(biz, { secScore, lastVerified, checklistPct, open, serious }) {
+  const pct = (n, d) => (d ? Math.round((n / d) * 100) : null);
+  const fixes = biz.fixes || [];
+  const areas = [
+    ['Security controls', secScore, lastVerified ? `verified (${lastVerified.name})` : 'not assessed yet', '#/assessment'],
+    ['PDPA checklist', checklistPct, 'items in place', '#/checklist'],
+    ['Risks treated', pct(biz.risks.length - open.length, biz.risks.length), biz.risks.length ? `${biz.risks.length - open.length} of ${biz.risks.length} closed` : 'no risks recorded', '#/risks'],
+    ['Fixes done', pct(fixes.filter((f) => f.status === 'done').length, fixes.length), fixes.length ? `${fixes.filter((f) => f.status === 'done').length} of ${fixes.length} done` : 'no fixes planned', '#/actions'],
+  ];
+  const known = areas.map((a) => a[1]).filter((v) => v !== null);
+  const overall = known.length ? Math.round(known.reduce((a, b) => a + b, 0) / known.length) : null;
+
+  const ring = h('div', { class: 'ring', role: 'img', 'aria-label': overall === null ? 'Readiness not yet measured' : `Overall readiness ${overall}%` },
+    h('div', { class: 'ring-inner' }, h('span', { class: 'ring-value' }, overall === null ? '–' : `${overall}%`), h('span', { class: 'ring-label' }, 'readiness')));
+  paint(ring, overall ?? 0);
+
+  return h('div', { class: 'overview' },
+    h('section', { class: 'card readiness' },
+      ring,
+      h('div', {}, h('h3', {}, 'Overall readiness'),
+        h('p', { class: 'help' }, `Average of the ${known.length || 'four'} areas with data.`))),
+    h('section', { class: 'card' },
+      h('h3', {}, 'Progress by area'),
+      h('ul', { class: 'progress-list' }, areas.map(([name, value, detail, href]) => {
+        const m = h('div', { class: 'meter', role: 'img', 'aria-label': `${name} ${value ?? 0}%` });
+        paint(m, value ?? 0);
+        return h('li', { class: 'progress-row' },
+          h('div', { class: 'progress-top' }, h('a', { href }, name), h('span', {}, value === null ? '–' : `${value}%`)),
+          m, h('small', { class: 'help' }, detail));
+      }))),
+    h('section', { class: 'card' },
+      h('h3', {}, 'Next steps'),
+      nextSteps(biz, { secScore, lastVerified, checklistPct, open, serious })),
+  );
+}
+
+// Sets the fill without an inline style attribute (blocked by the CSP).
+function paint(el, value) {
+  const v = Math.max(0, Math.min(100, Number(value) || 0));
+  el.style.setProperty('--p', String(v));
+  el.style.setProperty('--c', v < 40 ? 'var(--gap-fill)' : v < 70 ? 'var(--warn-fill)' : 'var(--ok-fill)');
+}
+
+function nextSteps(biz, { lastVerified, checklistPct, open }) {
+  const steps = [];
+  for (const r of topRisks(open).filter((x) => ['critical', 'high'].includes(level(score(x)))).slice(0, 3)) {
+    steps.push(['bad', `Treat risk: ${r.title}`, `${LEVEL_LABEL[level(score(r))]} risk`, '#/risks']);
+  }
+  for (const b of biz.breaches.filter((x) => x.status === 'open').slice(0, 1)) {
+    steps.push(['bad', `Close breach: ${b.title}`, 'Check whether JPDP must be told within 72 hours', '#/breaches']);
+  }
+  for (const f of (biz.fixes || []).filter((x) => x.status !== 'done').slice(0, 2)) {
+    steps.push(['warn', `Fix: ${f.title}`, f.controls ? `Controls ${f.controls}` : 'From the action plan', '#/actions']);
+  }
+  if (!lastVerified) steps.push(['warn', 'Run a verified gap assessment', 'Check each control against evidence, not just answers', '#/assessment']);
+  if (checklistPct < 100) steps.push(['', 'Work through the PDPA checklist', `${checklistPct}% in place so far`, '#/checklist']);
+  if (!steps.length) return h('p', { class: 'empty' }, 'Nothing urgent. Keep the inventory up to date.');
+  return h('ul', { class: 'next-steps' }, steps.slice(0, 6).map(([tone, title, detail, href]) =>
+    h('li', {}, h('span', { class: `dot ${tone}`, 'aria-hidden': 'true' }),
+      h('span', {}, h('a', { href }, title), h('small', {}, detail)))));
 }
 
 function stat(value, text, href, alert = false) {

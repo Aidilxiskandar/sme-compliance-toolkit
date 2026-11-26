@@ -17,11 +17,13 @@ const EXAMPLES = [
 ];
 const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
 
-const TABS = [
-  ['dashboard', 'Dashboard'], ['profile', 'Profile'], ['assets', 'Devices'], ['accounts', 'Accounts'],
-  ['data', 'Personal data'], ['risks', 'Risks'], ['checklist', 'PDPA checklist'], ['policies', 'Policies'],
-  ['plan', 'Breach plan'], ['breaches', 'Breach register'], ['assessment', 'Gap assessment'], ['actions', 'Action plan'],
-  ['controls', 'Controls'],
+// Sidebar sections, grouped the way compliance tools (Vanta, Drata) organise
+// them: an overview, the inventory, risk and controls work, and the legal layer.
+const NAV = [
+  ['Overview', [['dashboard', 'Dashboard']]],
+  ['Inventory', [['profile', 'Business profile'], ['assets', 'Devices'], ['accounts', 'Accounts'], ['data', 'Personal data']]],
+  ['Risk & controls', [['risks', 'Risks'], ['assessment', 'Gap assessment'], ['actions', 'Action plan'], ['controls', 'Controls']]],
+  ['PDPA', [['checklist', 'PDPA checklist'], ['policies', 'Policies'], ['plan', 'Breach plan'], ['breaches', 'Breach register']]],
 ];
 
 const COLUMNS = {
@@ -38,6 +40,7 @@ let checklistItems = [];
 let bank = { levels: [], questions: [] };
 const main = document.getElementById('main');
 const bar = document.getElementById('bar');
+const side = document.getElementById('side');
 const note = document.getElementById('note');
 
 // Anti-clickjacking: GitHub Pages can't send X-Frame-Options or a frame-ancestors header,
@@ -54,7 +57,7 @@ async function init() {
     main.append(h('section', { class: 'card' },
       h('h2', {}, 'This app can\'t be shown inside another website'),
       h('p', {}, 'To protect your data, the SME Security Kit only works when opened directly.'),
-      h('p', {}, h('a', { href: 'https://aidilxiskandar.github.io/sme-compliance-toolkit/app/', target: '_blank', rel: 'noopener noreferrer' }, 'Open the SME Security Kit'))));
+      h('p', {}, h('a', { href: 'https://sme-compliance-toolkit.sme-compliance-toolkit.workers.dev/app/', target: '_blank', rel: 'noopener noreferrer' }, 'Open the SME Security Kit'))));
     return;
   }
   try {
@@ -95,25 +98,31 @@ async function select(id) {
 
 async function drawBar() {
   clear(bar);
+  clear(side);
   const all = await store.list();
   const picker = h('select', { 'aria-label': 'Business', onchange: (e) => select(e.target.value) },
     h('option', { value: '' }, all.length ? 'Choose a business…' : 'No businesses yet'),
     all.map((b) => h('option', { value: b.id, selected: biz && b.id === biz.id }, b.profile.name)));
-  // Element.append() would turn the null placeholders below into the text
-  // "null", so only append the parts that exist.
+  // Element.append() would turn null placeholders into the text "null",
+  // so only append the parts that exist.
   bar.append(...[
-    h('a', { class: 'brand', href: '#/' }, 'SME Security Kit'),
     picker,
-    h('button', { type: 'button', onclick: addBusiness }, 'New'),
+    h('span', { class: 'spacer' }),
+    h('button', { type: 'button', onclick: addBusiness }, 'New business'),
     h('label', { class: 'button' }, 'Open file', h('input', { type: 'file', accept: 'application/json,.json', class: 'sr-only', onchange: importFile })),
     biz ? h('button', { type: 'button', title: 'The file contains this business\'s security weaknesses and personal data details. Keep it somewhere private.', onclick: saveFile }, 'Save file') : null,
     biz ? h('button', { type: 'button', class: 'danger', onclick: removeBusiness }, 'Delete') : null,
   ].filter(Boolean));
-  if (biz) {
-    const route = currentRoute()[0];
-    bar.append(h('nav', { class: 'tabs', 'aria-label': 'Sections' },
-      TABS.map(([k, label]) => h('a', { href: `#/${k}`, class: route === k ? 'active' : '', 'aria-current': route === k ? 'page' : null }, label))));
-  }
+
+  const route = currentRoute()[0] || 'dashboard';
+  side.append(...[
+    h('a', { class: 'brand', href: '#/' }, h('span', { class: 'brand-mark', 'aria-hidden': 'true' }, 'SK'),
+      h('span', {}, 'SME Security Kit', h('small', {}, 'Security & PDPA'))),
+    biz ? h('nav', { 'aria-label': 'Sections' }, NAV.map(([group, items]) => h('div', { class: 'nav-group' },
+      h('div', { class: 'nav-label' }, group),
+      items.map(([k, label]) => h('a', { href: `#/${k}`, class: route === k ? 'active' : '', 'aria-current': route === k ? 'page' : null }, label))))) : null,
+    h('div', { class: 'side-foot' }, 'Runs in your browser. ', h('a', { href: '#/about' }, 'About')),
+  ].filter(Boolean));
 }
 
 function currentRoute() {
