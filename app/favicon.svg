@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect x="2" y="2" width="116" height="116" rx="26" fill="#14213D"/>
-  <path d="M42 50 V40 a18 18 0 0 1 36 0 V50" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
-  <rect x="22" y="54" width="76" height="50" rx="10" fill="#FFFFFF"/>
-  <rect x="18" y="46" width="28" height="16" fill="#2F5BEA"/><rect x="46" y="46" width="28" height="16" fill="#FFFFFF"/><rect x="74" y="46" width="28" height="16" fill="#2F5BEA"/>
-  <path d="M18 62 a14 14 0 0 0 28 0 Z" fill="#2F5BEA"/><path d="M46 62 a14 14 0 0 0 28 0 Z" fill="#FFFFFF"/><path d="M74 62 a14 14 0 0 0 28 0 Z" fill="#2F5BEA"/>
-  <circle cx="60" cy="84" r="8" fill="#14213D"/><rect x="56" y="86" width="8" height="12" rx="2" fill="#14213D"/>
+  <rect x="4" y="4" width="112" height="112" rx="26" fill="#FFFFFF" stroke="#14213D" stroke-width="8"/>
+  <path d="M42 50 V40 a18 18 0 0 1 36 0 V50" fill="none" stroke="#14213D" stroke-width="12" stroke-linecap="round"/>
+  <rect x="24" y="54" width="72" height="48" rx="9" fill="#FFFFFF" stroke="#14213D" stroke-width="7"/>
+  <rect x="20" y="46" width="27" height="16" fill="#2F5BEA"/><rect x="47" y="46" width="26" height="16" fill="#FFFFFF"/><rect x="73" y="46" width="27" height="16" fill="#2F5BEA"/>
+  <path d="M20 62 a13.5 13.5 0 0 0 27 0 Z" fill="#2F5BEA"/><path d="M47 62 a13 13 0 0 0 26 0 Z" fill="#FFFFFF"/><path d="M73 62 a13.5 13.5 0 0 0 27 0 Z" fill="#2F5BEA"/>
+  <path d="M20 46 H100 V62 a13.5 13.5 0 0 1 -27 0 a13 13 0 0 1 -26 0 a13.5 13.5 0 0 1 -27 0 Z" fill="none" stroke="#14213D" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="60" cy="81" r="7" fill="#14213D"/><rect x="56.5" y="83" width="7" height="11" rx="2" fill="#14213D"/>
 </svg>
