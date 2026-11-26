@@ -1,0 +1,16 @@
+# Cloudflare Pages response headers.
+# GitHub Pages can't send these, which is why the app also carries a JavaScript
+# frame-buster (app/js/main.js). Here the browser enforces them for real.
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Data files change with releases; let browsers revalidate instead of caching stale answers.
+/data/*
+  Cache-Control: no-cache
