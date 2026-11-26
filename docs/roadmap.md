@@ -35,5 +35,6 @@ Pace: about 4 to 5 hours a week.
 - [ ] Optional Bahasa Malaysia version
 - [x] Licence: MIT
 - [x] Full-history leak scan (clean), commit emails moved to GitHub noreply, repo made public, app live on [GitHub Pages](https://aidilxiskandar.github.io/sme-compliance-toolkit/) (11 Nov 2026)
+- [x] Moved the live app to Cloudflare (Workers static assets) so the browser gets real security headers: CSP with `frame-ancestors 'none'`, X-Frame-Options, HSTS (26 Nov 2026). Fixed a stray "nullnull" in the top bar for first-time visitors.
 - [ ] LinkedIn post (later)
 - [ ] Trial with 1 to 2 other small businesses

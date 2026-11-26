@@ -99,14 +99,16 @@ async function drawBar() {
   const picker = h('select', { 'aria-label': 'Business', onchange: (e) => select(e.target.value) },
     h('option', { value: '' }, all.length ? 'Choose a business…' : 'No businesses yet'),
     all.map((b) => h('option', { value: b.id, selected: biz && b.id === biz.id }, b.profile.name)));
-  bar.append(
+  // Element.append() would turn the null placeholders below into the text
+  // "null", so only append the parts that exist.
+  bar.append(...[
     h('a', { class: 'brand', href: '#/' }, 'SME Security Kit'),
     picker,
     h('button', { type: 'button', onclick: addBusiness }, 'New'),
     h('label', { class: 'button' }, 'Open file', h('input', { type: 'file', accept: 'application/json,.json', class: 'sr-only', onchange: importFile })),
     biz ? h('button', { type: 'button', title: 'The file contains this business\'s security weaknesses and personal data details. Keep it somewhere private.', onclick: saveFile }, 'Save file') : null,
     biz ? h('button', { type: 'button', class: 'danger', onclick: removeBusiness }, 'Delete') : null,
-  );
+  ].filter(Boolean));
   if (biz) {
     const route = currentRoute()[0];
     bar.append(h('nav', { class: 'tabs', 'aria-label': 'Sections' },

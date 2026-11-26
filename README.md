@@ -2,7 +2,7 @@
 
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
-> **Live app:** https://aidilxiskandar.github.io/sme-compliance-toolkit/ (runs in your browser; your data stays on your device)
+> **Live app:** https://sme-compliance-toolkit.sme-compliance-toolkit.workers.dev/ (runs in your browser; your data stays on your device). Served from Cloudflare with full security headers (CSP, anti-framing, HSTS); the [GitHub Pages copy](https://aidilxiskandar.github.io/sme-compliance-toolkit/) still works but can't send those headers.
 >
 > **Case study:** [What five small Malaysian businesses get wrong about security, and what fixing it costs](docs/case-study.md)
 
