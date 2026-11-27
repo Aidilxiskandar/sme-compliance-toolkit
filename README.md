@@ -2,6 +2,8 @@
 
 # SME Compliance Toolkit
 
+[![CI](https://github.com/Aidilxiskandar/sme-compliance-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Aidilxiskandar/sme-compliance-toolkit/actions/workflows/ci.yml)
+
 A free, practical **security and data-protection starter kit for Malaysian small businesses** such as cafes, shops and small offices. It is built around NIST CSF 2.0, mapped to ISO/IEC 27001:2022 Annex A and CIS Controls v8.1 (IG1), and covers the Personal Data Protection Act 2010 (PDPA) as amended in 2024.
 
 > **Live app:** https://sme-compliance-toolkit.sme-compliance-toolkit.workers.dev/ (runs in your browser; your data stays on your device). Served from Cloudflare with full security headers (CSP, anti-framing, HSTS); the [GitHub Pages copy](https://aidilxiskandar.github.io/sme-compliance-toolkit/) still works but can't send those headers.
@@ -12,10 +14,24 @@ A free, practical **security and data-protection starter kit for Malaysian small
 
 > **Not legal advice.** This is a starter kit to help a small business get the basics right. For legal questions about the PDPA, check the official sources or ask a lawyer.
 
+## Screenshots
+
+![Dashboard for the fictional cafe Kopi Senja: overall readiness ring, progress by area and next steps](docs/screenshots/dashboard.png)
+
+<p>
+  <img src="docs/screenshots/risks.png" width="49%" alt="Risk register: each risk scored likelihood times impact and colour-coded high or medium">
+  <img src="docs/screenshots/checklist.png" width="49%" alt="PDPA checklist: each duty with its legal source and the toolkit control it maps to">
+</p>
+<p>
+  <img src="docs/screenshots/home.png" width="49%" alt="Start page: add your own business or explore one of five fictional examples">
+  <img src="docs/screenshots/mobile.png" width="22%" alt="The dashboard on a phone">
+</p>
+<sub>All data shown is from the fictional example business Kopi Senja.</sub>
+
 ## Why
 Most small businesses hold personal data (customer phone numbers, delivery addresses, CCTV, staff records) and run on a few laptops, a POS and shared Wi-Fi. Enterprise frameworks are too big for them, and the PDPA amendments added duties such as breach notification. This kit cuts the frameworks down to what a five-person business can actually do in a few weekends, with templates they can fill in.
 
-## What's inside (planned)
+## What's inside
 | # | Item | Format |
 |---|---|---|
 | 1 | Asset and personal-data inventory | Spreadsheet |
